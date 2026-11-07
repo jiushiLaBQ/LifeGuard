@@ -1,0 +1,15 @@
+{
+  "name": "lifeguard",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @lifeguard/web -- --host 127.0.0.1",
+    "build": "npm run build --workspace @lifeguard/web",
+    "typecheck": "npm run typecheck --workspace @lifeguard/web",
+    "test": "npm run test --workspace @lifeguard/web",
+    "preview": "npm run preview --workspace @lifeguard/web -- --host 127.0.0.1"
+  }
+}
