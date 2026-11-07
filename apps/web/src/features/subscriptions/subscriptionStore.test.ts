@@ -86,4 +86,59 @@ describe('订阅状态管理与材料确认', () => {
     expect(() => store.addSubscription(input({ nextRenewal: '2027-02-30' }))).toThrow('日期')
     expect(store.subscriptions).toHaveLength(0)
   })
+
+  it('手动订阅的续费提醒随状态实时出现与消失', () => {
+    const store = useDemoStore()
+    store.clearDemo()
+    const renewal = new Date()
+    renewal.setDate(renewal.getDate() + 12)
+    const date = `${renewal.getFullYear()}-${String(renewal.getMonth() + 1).padStart(2, '0')}-${String(renewal.getDate()).padStart(2, '0')}`
+    const subscription = store.addSubscription(input({ cycle: 'monthly', amount: 40, nextRenewal: date }))
+
+    const events = () => store.upcomingRenewals.filter((event) => event.subscriptionId === subscription.id)
+    expect(events()).toHaveLength(1)
+    expect(events()[0].date).toBe(date)
+
+    store.pauseSubscription(subscription.id)
+    expect(events()).toHaveLength(0)
+    store.resumeSubscription(subscription.id)
+    expect(events()).toHaveLength(1)
+    store.updateSubscription(subscription.id, input({ cycle: 'monthly', amount: 40, nextRenewal: date, autoRenew: false }))
+    expect(events()).toHaveLength(0)
+    store.removeSubscription(subscription.id)
+    expect(store.upcomingRenewals).toHaveLength(0)
+  })
+
+  it('材料关联事项抑制重复提醒，删除事项后提醒恢复且订阅保留', () => {
+    const store = useDemoStore()
+    store.clearDemo()
+    const renewal = new Date()
+    renewal.setDate(renewal.getDate() + 10)
+    const date = `${renewal.getFullYear()}-${String(renewal.getMonth() + 1).padStart(2, '0')}-${String(renewal.getDate()).padStart(2, '0')}`
+    const recognition = {
+      ...emptyRecognition(), document_type: '订阅' as const, title: '虚构提醒订阅', amount: '40', currency: 'CNY' as const,
+      renewal_date: date, merchant: '虚构服务商',
+    }
+    const material: MaterialItem = {
+      id: 'material-reminder-test', name: '虚构提醒订单.png', size: 100, mimeType: 'image/png', status: 'awaiting_confirmation',
+      uploadedAt: new Date().toISOString(), source: 'local', recognition,
+      fields: recognitionToFields(recognition).map((field) => field.key === 'billing_cycle' ? { ...field, value: 'monthly' } : field),
+    }
+    store.addMaterial(material)
+
+    const matter = store.confirmMaterial(material.id, material.fields, 'subscription', 'CNY', '订阅', '效率工具')
+    const subscription = store.subscriptions.find((item) => item.materialId === material.id)!
+    expect(matter.subscriptionId).toBe(subscription.id)
+    expect(store.upcomingRenewals.some((event) => event.subscriptionId === subscription.id)).toBe(false)
+
+    store.removeMatter(matter.id)
+
+    expect(store.getMatter(matter.id)).toBeUndefined()
+    expect(store.getPlan(matter.id)).toBeUndefined()
+    expect(store.getHistories(matter.id)).toHaveLength(0)
+    expect(store.subscriptions).toHaveLength(1)
+    const events = store.upcomingRenewals.filter((event) => event.subscriptionId === subscription.id)
+    expect(events).toHaveLength(1)
+    expect(events[0].date).toBe(date)
+  })
 })

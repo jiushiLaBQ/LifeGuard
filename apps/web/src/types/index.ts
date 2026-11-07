@@ -50,6 +50,7 @@ export interface Matter {
   description: string
   nextAction: string
   source: 'demo' | 'manual' | 'material'
+  subscriptionId?: string
   completedOn?: string
   outcome?: string
   savedAmount?: number

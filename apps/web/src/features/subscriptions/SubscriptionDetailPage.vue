@@ -26,7 +26,7 @@ const duplicateGroup = computed(() => subscription.value ? findDuplicateCandidat
 const highCost = computed(() => subscription.value ? findHighCostSubscriptions(store.subscriptions, subscription.value.currency).find((item) => item.subscription.id === subscription.value?.id) : undefined)
 const suggestions = computed(() => subscription.value ? buildSavingSuggestions(store.subscriptions, today, subscription.value.currency).filter((suggestion) => suggestion.subscriptionIds.includes(subscription.value!.id)) : [])
 const sourceMaterial = computed(() => store.materials.find((material) => material.id === subscription.value?.materialId))
-const relatedMatter = computed(() => store.matters.find((matter) => matter.type === 'subscription' && matter.title === subscription.value?.service && matter.dueDate === subscription.value?.nextRenewal))
+const relatedMatter = computed(() => store.matters.find((matter) => matter.subscriptionId === subscription.value?.id) ?? store.matters.find((matter) => matter.type === 'subscription' && matter.title === subscription.value?.service && matter.dueDate === subscription.value?.nextRenewal))
 
 function togglePause() {
   if (!subscription.value) return

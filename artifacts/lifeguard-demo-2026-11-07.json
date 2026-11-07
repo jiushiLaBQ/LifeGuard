@@ -1,0 +1,2051 @@
+{
+  "exportedAt": "2026-11-07T09:29:37.071Z",
+  "mode": "lifeguard-local-demo",
+  "profile": {
+    "name": "林晓",
+    "email": "demo@lifeguard.local",
+    "timezone": "Asia/Shanghai",
+    "currency": "CNY",
+    "weeklySummary": false
+  },
+  "matters": [
+    {
+      "title": "浏览器验收材料",
+      "merchant": "本地材料商家",
+      "amount": 19.9,
+      "dueDate": null,
+      "type": "payment",
+      "nextAction": "查看行动清单并处理下一步",
+      "id": "c8cbd9a6-57a1-4b13-8814-64f1b60cc424",
+      "currency": "CNY",
+      "status": "active",
+      "risk": "low",
+      "description": "由你核对材料字段并确认生成的生活事项。",
+      "source": "material",
+      "provenance": {
+        "amount": {
+          "source": "user",
+          "confirmed": true,
+          "note": "材料字段已由你核对确认。"
+        }
+      },
+      "assessment": {
+        "score": 26,
+        "level": "low",
+        "factors": [
+          {
+            "key": "time",
+            "label": "时间紧迫程度",
+            "weight": 40,
+            "score": 0,
+            "points": 0,
+            "source": "unverified",
+            "explanation": "缺少缴费或办理截止日，时间因素计 0 分，不用猜测日期补齐。"
+          },
+          {
+            "key": "loss",
+            "label": "潜在经济损失",
+            "weight": 15,
+            "score": 20,
+            "points": 3,
+            "source": "user",
+            "explanation": "按待办理金额 19.9 CNY 与分类型金额尺度计分；这是排序依据，不是实际损失或赔付承诺。"
+          },
+          {
+            "key": "importance",
+            "label": "事项重要程度",
+            "weight": 20,
+            "score": 80,
+            "points": 16,
+            "source": "inference",
+            "explanation": "重要程度为 4/5，映射为 80 分；该值由事项类型规则暂估。"
+          },
+          {
+            "key": "preparation",
+            "label": "处理准备时间",
+            "weight": 10,
+            "score": 10,
+            "points": 1,
+            "source": "inference",
+            "explanation": "预计准备 1 天，但截止日缺失，无法比较时间余量，仅按准备工作量计分。"
+          },
+          {
+            "key": "completeness",
+            "label": "信息完整程度",
+            "weight": 15,
+            "score": 40,
+            "points": 6,
+            "source": "unverified",
+            "explanation": "综合期限、金额、重要性、准备时间的来源与确认状态；用户核对的信息得分最高，推断和未核实信息会降低本项得分。"
+          }
+        ],
+        "missingInformation": [
+          "缴费或办理截止日尚未提供",
+          "重要程度未填写，暂按4/5计算，请确认",
+          "准备时间未填写，暂按1 天计算，请确认"
+        ],
+        "ruleVersion": "lifeguard-rules-1.0",
+        "summary": "当前优先级主要由事项重要程度、信息完整程度贡献。仍有 3 项信息需要补充或核实。"
+      }
+    },
+    {
+      "title": "浏览器验收事项（已编辑）",
+      "merchant": "本地测试商家",
+      "amount": 88.5,
+      "dueDate": "2026-12-31",
+      "type": "purchase",
+      "importance": 3,
+      "preparationDays": 2,
+      "nextAction": "核对记录并完成测试",
+      "id": "77136238-e4dd-45c6-8715-7a773bef5198",
+      "currency": "CNY",
+      "status": "active",
+      "risk": "low",
+      "description": "由你手工创建并确认的生活事项。",
+      "source": "manual",
+      "provenance": {
+        "dueDate": {
+          "source": "user",
+          "confirmed": true,
+          "note": "既有工作区记录，已由用户确认或属于虚构演示数据。"
+        },
+        "amount": {
+          "source": "user",
+          "confirmed": true,
+          "note": "既有工作区记录，已由用户确认或属于虚构演示数据。"
+        },
+        "importance": {
+          "source": "user",
+          "confirmed": true,
+          "note": "由你在编辑事项时提供并确认。"
+        },
+        "preparationDays": {
+          "source": "user",
+          "confirmed": true,
+          "note": "由你在编辑事项时提供并确认。"
+        }
+      },
+      "assessment": {
+        "score": 28,
+        "level": "low",
+        "factors": [
+          {
+            "key": "time",
+            "label": "时间紧迫程度",
+            "weight": 40,
+            "score": 10,
+            "points": 4,
+            "source": "user",
+            "explanation": "退货或售后截止日还有 54 天，按该事项期限曲线计 10 分；用户提供且已核对。"
+          },
+          {
+            "key": "loss",
+            "label": "潜在经济损失",
+            "weight": 25,
+            "score": 20,
+            "points": 5,
+            "source": "user",
+            "explanation": "按商品金额或预计损失 88.5 CNY 与分类型金额尺度计分；这是排序依据，不是实际损失或赔付承诺。"
+          },
+          {
+            "key": "importance",
+            "label": "事项重要程度",
+            "weight": 15,
+            "score": 60,
+            "points": 9,
+            "source": "user",
+            "explanation": "重要程度为 3/5，映射为 60 分；用户提供且已核对。"
+          },
+          {
+            "key": "preparation",
+            "label": "处理准备时间",
+            "weight": 10,
+            "score": 4,
+            "points": 0,
+            "source": "user",
+            "explanation": "预计准备 2 天，还有 54 天；准备时间越接近或超过剩余时间，得分越高。"
+          },
+          {
+            "key": "completeness",
+            "label": "信息完整程度",
+            "weight": 10,
+            "score": 100,
+            "points": 10,
+            "source": "user",
+            "explanation": "综合期限、金额、重要性、准备时间的来源与确认状态；用户核对的信息得分最高，推断和未核实信息会降低本项得分。"
+          }
+        ],
+        "missingInformation": [],
+        "ruleVersion": "lifeguard-rules-1.0",
+        "summary": "当前优先级主要由信息完整程度、事项重要程度贡献。关键信息均已核对。"
+      }
+    },
+    {
+      "id": "matter-headphones",
+      "title": "降噪耳机退货",
+      "merchant": "声浪数码旗舰店",
+      "type": "purchase",
+      "status": "active",
+      "risk": "urgent",
+      "amount": 1299,
+      "exposure": 1299,
+      "currency": "CNY",
+      "dueDate": "2026-11-07",
+      "purchasedOn": "2026-11-01",
+      "description": "订单截图显示七天无理由退货期限今天截止，商品与配件已整理。",
+      "nextAction": "提交退货申请并上传商品照片",
+      "source": "demo",
+      "provenance": {
+        "dueDate": {
+          "source": "user",
+          "confirmed": true,
+          "note": "既有工作区记录，已由用户确认或属于虚构演示数据。"
+        },
+        "amount": {
+          "source": "user",
+          "confirmed": true,
+          "note": "既有工作区记录，已由用户确认或属于虚构演示数据。"
+        }
+      },
+      "assessment": {
+        "score": 86,
+        "level": "urgent",
+        "factors": [
+          {
+            "key": "time",
+            "label": "时间紧迫程度",
+            "weight": 40,
+            "score": 100,
+            "points": 40,
+            "source": "user",
+            "explanation": "退货或售后截止日今天到期，按该事项期限曲线计 100 分；用户提供且已核对。"
+          },
+          {
+            "key": "loss",
+            "label": "潜在经济损失",
+            "weight": 25,
+            "score": 80,
+            "points": 20,
+            "source": "user",
+            "explanation": "按商品金额或预计损失 1299 CNY 与分类型金额尺度计分；这是排序依据，不是实际损失或赔付承诺。"
+          },
+          {
+            "key": "importance",
+            "label": "事项重要程度",
+            "weight": 15,
+            "score": 60,
+            "points": 9,
+            "source": "inference",
+            "explanation": "重要程度为 3/5，映射为 60 分；该值由事项类型规则暂估。"
+          },
+          {
+            "key": "preparation",
+            "label": "处理准备时间",
+            "weight": 10,
+            "score": 100,
+            "points": 10,
+            "source": "inference",
+            "explanation": "预计准备 2 天，今天到期；准备时间越接近或超过剩余时间，得分越高。"
+          },
+          {
+            "key": "completeness",
+            "label": "信息完整程度",
+            "weight": 10,
+            "score": 65,
+            "points": 7,
+            "source": "inference",
+            "explanation": "综合期限、金额、重要性、准备时间的来源与确认状态；用户核对的信息得分最高，推断和未核实信息会降低本项得分。"
+          }
+        ],
+        "missingInformation": [
+          "重要程度未填写，暂按3/5计算，请确认",
+          "准备时间未填写，暂按2 天计算，请确认"
+        ],
+        "ruleVersion": "lifeguard-rules-1.0",
+        "summary": "当前优先级主要由时间紧迫程度、潜在经济损失贡献。仍有 2 项信息需要补充或核实。"
+      }
+    },
+    {
+      "id": "matter-video",
+      "title": "云享视频会员续费",
+      "merchant": "云享视频",
+      "type": "subscription",
+      "status": "active",
+      "risk": "medium",
+      "amount": 25,
+      "exposure": 25,
+      "currency": "CNY",
+      "dueDate": "2026-11-09",
+      "description": "月度自动续费将在两天后扣款，当前不常使用。",
+      "nextAction": "确认是否保留，不需要则取消自动续费",
+      "source": "demo",
+      "provenance": {
+        "dueDate": {
+          "source": "user",
+          "confirmed": true,
+          "note": "既有工作区记录，已由用户确认或属于虚构演示数据。"
+        },
+        "amount": {
+          "source": "user",
+          "confirmed": true,
+          "note": "既有工作区记录，已由用户确认或属于虚构演示数据。"
+        }
+      },
+      "assessment": {
+        "score": 61,
+        "level": "medium",
+        "factors": [
+          {
+            "key": "time",
+            "label": "时间紧迫程度",
+            "weight": 40,
+            "score": 85,
+            "points": 34,
+            "source": "user",
+            "explanation": "下次续费日还有 2 天，按该事项期限曲线计 85 分；用户提供且已核对。"
+          },
+          {
+            "key": "loss",
+            "label": "潜在经济损失",
+            "weight": 20,
+            "score": 26,
+            "points": 5,
+            "source": "user",
+            "explanation": "按续费金额 25 CNY 与分类型金额尺度计分；这是排序依据，不是实际损失或赔付承诺。"
+          },
+          {
+            "key": "importance",
+            "label": "事项重要程度",
+            "weight": 15,
+            "score": 60,
+            "points": 9,
+            "source": "inference",
+            "explanation": "重要程度为 3/5，映射为 60 分；该值由事项类型规则暂估。"
+          },
+          {
+            "key": "preparation",
+            "label": "处理准备时间",
+            "weight": 10,
+            "score": 33,
+            "points": 3,
+            "source": "inference",
+            "explanation": "预计准备 1 天，还有 2 天；准备时间越接近或超过剩余时间，得分越高。"
+          },
+          {
+            "key": "completeness",
+            "label": "信息完整程度",
+            "weight": 15,
+            "score": 65,
+            "points": 10,
+            "source": "inference",
+            "explanation": "综合期限、金额、重要性、准备时间的来源与确认状态；用户核对的信息得分最高，推断和未核实信息会降低本项得分。"
+          }
+        ],
+        "missingInformation": [
+          "重要程度未填写，暂按3/5计算，请确认",
+          "准备时间未填写，暂按1 天计算，请确认"
+        ],
+        "ruleVersion": "lifeguard-rules-1.0",
+        "summary": "当前优先级主要由时间紧迫程度、信息完整程度贡献。仍有 2 项信息需要补充或核实。"
+      }
+    },
+    {
+      "id": "matter-lease",
+      "title": "青年公寓退租通知",
+      "merchant": "青年公寓",
+      "type": "lease",
+      "status": "active",
+      "risk": "urgent",
+      "amount": 3500,
+      "exposure": 3500,
+      "currency": "CNY",
+      "dueDate": "2026-11-12",
+      "description": "合同约定退租需提前通知，押金退还以完成房屋交接为前提。",
+      "nextAction": "发送退租通知并预约验房",
+      "source": "demo",
+      "provenance": {
+        "dueDate": {
+          "source": "user",
+          "confirmed": true,
+          "note": "既有工作区记录，已由用户确认或属于虚构演示数据。"
+        },
+        "amount": {
+          "source": "user",
+          "confirmed": true,
+          "note": "既有工作区记录，已由用户确认或属于虚构演示数据。"
+        }
+      },
+      "assessment": {
+        "score": 85,
+        "level": "urgent",
+        "factors": [
+          {
+            "key": "time",
+            "label": "时间紧迫程度",
+            "weight": 30,
+            "score": 90,
+            "points": 27,
+            "source": "user",
+            "explanation": "合同到期或通知截止日还有 5 天，按合同期限曲线计 90 分；用户提供且已核对。"
+          },
+          {
+            "key": "loss",
+            "label": "潜在经济损失",
+            "weight": 15,
+            "score": 64,
+            "points": 10,
+            "source": "user",
+            "explanation": "按押金或相关履约金额 3500 CNY 与分类型金额尺度计分；这是排序依据，不是实际损失或赔付承诺。"
+          },
+          {
+            "key": "importance",
+            "label": "事项重要程度",
+            "weight": 25,
+            "score": 100,
+            "points": 25,
+            "source": "inference",
+            "explanation": "重要程度为 5/5，映射为 100 分；该值由事项类型规则暂估。"
+          },
+          {
+            "key": "preparation",
+            "label": "处理准备时间",
+            "weight": 15,
+            "score": 100,
+            "points": 15,
+            "source": "inference",
+            "explanation": "预计准备 7 天，还有 5 天；准备时间越接近或超过剩余时间，得分越高。"
+          },
+          {
+            "key": "completeness",
+            "label": "信息完整程度",
+            "weight": 15,
+            "score": 52,
+            "points": 8,
+            "source": "unverified",
+            "explanation": "综合期限、金额、重要性、准备时间和合同义务的来源与确认状态；用户核对的信息得分最高，推断和未核实信息会降低本项得分。"
+          }
+        ],
+        "missingInformation": [
+          "重要程度未填写，暂按5/5计算，请确认",
+          "准备时间未填写，暂按7 天计算，请确认",
+          "合同待履行义务尚未提供，请核对合同文本"
+        ],
+        "ruleVersion": "lifeguard-rules-1.0",
+        "summary": "当前优先级主要由时间紧迫程度、事项重要程度贡献。仍有 3 项信息需要补充或核实。"
+      }
+    },
+    {
+      "id": "matter-tablet",
+      "title": "平板电脑保修到期",
+      "merchant": "星河数码",
+      "type": "warranty",
+      "status": "active",
+      "risk": "low",
+      "amount": 4299,
+      "exposure": 500,
+      "currency": "CNY",
+      "dueDate": "2026-11-25",
+      "purchasedOn": "2025-11-25",
+      "description": "设备偶尔无法充电，保修期内可先做检测。",
+      "nextAction": "备份设备并预约售后检测",
+      "source": "demo",
+      "provenance": {
+        "dueDate": {
+          "source": "user",
+          "confirmed": true,
+          "note": "既有工作区记录，已由用户确认或属于虚构演示数据。"
+        },
+        "amount": {
+          "source": "user",
+          "confirmed": true,
+          "note": "既有工作区记录，已由用户确认或属于虚构演示数据。"
+        }
+      },
+      "assessment": {
+        "score": 39,
+        "level": "low",
+        "factors": [
+          {
+            "key": "time",
+            "label": "时间紧迫程度",
+            "weight": 35,
+            "score": 35,
+            "points": 12,
+            "source": "user",
+            "explanation": "保修结束日还有 18 天，按该事项期限曲线计 35 分；用户提供且已核对。"
+          },
+          {
+            "key": "loss",
+            "label": "潜在经济损失",
+            "weight": 30,
+            "score": 20,
+            "points": 6,
+            "source": "user",
+            "explanation": "按商品价值或预计维修损失 500 CNY 与分类型金额尺度计分；这是排序依据，不是实际损失或赔付承诺。"
+          },
+          {
+            "key": "importance",
+            "label": "事项重要程度",
+            "weight": 15,
+            "score": 80,
+            "points": 12,
+            "source": "inference",
+            "explanation": "重要程度为 4/5，映射为 80 分；该值由事项类型规则暂估。"
+          },
+          {
+            "key": "preparation",
+            "label": "处理准备时间",
+            "weight": 10,
+            "score": 16,
+            "points": 2,
+            "source": "inference",
+            "explanation": "预计准备 3 天，还有 18 天；准备时间越接近或超过剩余时间，得分越高。"
+          },
+          {
+            "key": "completeness",
+            "label": "信息完整程度",
+            "weight": 10,
+            "score": 65,
+            "points": 7,
+            "source": "inference",
+            "explanation": "综合期限、金额、重要性、准备时间的来源与确认状态；用户核对的信息得分最高，推断和未核实信息会降低本项得分。"
+          }
+        ],
+        "missingInformation": [
+          "重要程度未填写，暂按4/5计算，请确认",
+          "准备时间未填写，暂按3 天计算，请确认"
+        ],
+        "ruleVersion": "lifeguard-rules-1.0",
+        "summary": "当前优先级主要由时间紧迫程度、事项重要程度贡献。仍有 2 项信息需要补充或核实。"
+      }
+    },
+    {
+      "id": "matter-course",
+      "title": "英语进阶课程有效期",
+      "merchant": "启程英语",
+      "type": "course",
+      "status": "active",
+      "risk": "medium",
+      "amount": 2399,
+      "currency": "CNY",
+      "dueDate": "2026-11-19",
+      "description": "已购买课程将在 12 天后结束有效期，还有 4 节直播课未使用。",
+      "nextAction": "预约剩余课程并导出学习资料",
+      "source": "demo",
+      "provenance": {
+        "dueDate": {
+          "source": "user",
+          "confirmed": true,
+          "note": "既有工作区记录，已由用户确认或属于虚构演示数据。"
+        },
+        "amount": {
+          "source": "user",
+          "confirmed": true,
+          "note": "既有工作区记录，已由用户确认或属于虚构演示数据。"
+        }
+      },
+      "assessment": {
+        "score": 59,
+        "level": "medium",
+        "factors": [
+          {
+            "key": "time",
+            "label": "时间紧迫程度",
+            "weight": 35,
+            "score": 55,
+            "points": 19,
+            "source": "user",
+            "explanation": "课程有效期截止日还有 12 天，按该事项期限曲线计 55 分；用户提供且已核对。"
+          },
+          {
+            "key": "loss",
+            "label": "潜在经济损失",
+            "weight": 20,
+            "score": 79,
+            "points": 16,
+            "source": "user",
+            "explanation": "按课程金额或未使用权益价值 2399 CNY 与分类型金额尺度计分；这是排序依据，不是实际损失或赔付承诺。"
+          },
+          {
+            "key": "importance",
+            "label": "事项重要程度",
+            "weight": 20,
+            "score": 60,
+            "points": 12,
+            "source": "inference",
+            "explanation": "重要程度为 3/5，映射为 60 分；该值由事项类型规则暂估。"
+          },
+          {
+            "key": "preparation",
+            "label": "处理准备时间",
+            "weight": 10,
+            "score": 15,
+            "points": 2,
+            "source": "inference",
+            "explanation": "预计准备 2 天，还有 12 天；准备时间越接近或超过剩余时间，得分越高。"
+          },
+          {
+            "key": "completeness",
+            "label": "信息完整程度",
+            "weight": 15,
+            "score": 65,
+            "points": 10,
+            "source": "inference",
+            "explanation": "综合期限、金额、重要性、准备时间的来源与确认状态；用户核对的信息得分最高，推断和未核实信息会降低本项得分。"
+          }
+        ],
+        "missingInformation": [
+          "重要程度未填写，暂按3/5计算，请确认",
+          "准备时间未填写，暂按2 天计算，请确认"
+        ],
+        "ruleVersion": "lifeguard-rules-1.0",
+        "summary": "当前优先级主要由时间紧迫程度、潜在经济损失贡献。仍有 2 项信息需要补充或核实。"
+      }
+    },
+    {
+      "id": "matter-payment",
+      "title": "下学期住宿费缴纳",
+      "merchant": "学生事务中心",
+      "type": "payment",
+      "status": "active",
+      "risk": "high",
+      "amount": 1200,
+      "exposure": 1200,
+      "currency": "CNY",
+      "dueDate": "2026-11-14",
+      "description": "缴费通知已确认，需在学校服务大厅完成缴纳并保存回执。",
+      "nextAction": "完成缴费并上传回执",
+      "source": "demo",
+      "provenance": {
+        "dueDate": {
+          "source": "user",
+          "confirmed": true,
+          "note": "既有工作区记录，已由用户确认或属于虚构演示数据。"
+        },
+        "amount": {
+          "source": "user",
+          "confirmed": true,
+          "note": "既有工作区记录，已由用户确认或属于虚构演示数据。"
+        }
+      },
+      "assessment": {
+        "score": 73,
+        "level": "high",
+        "factors": [
+          {
+            "key": "time",
+            "label": "时间紧迫程度",
+            "weight": 40,
+            "score": 85,
+            "points": 34,
+            "source": "user",
+            "explanation": "缴费或办理截止日还有 7 天，按该事项期限曲线计 85 分；用户提供且已核对。"
+          },
+          {
+            "key": "loss",
+            "label": "潜在经济损失",
+            "weight": 15,
+            "score": 78,
+            "points": 12,
+            "source": "user",
+            "explanation": "按待办理金额 1200 CNY 与分类型金额尺度计分；这是排序依据，不是实际损失或赔付承诺。"
+          },
+          {
+            "key": "importance",
+            "label": "事项重要程度",
+            "weight": 20,
+            "score": 80,
+            "points": 16,
+            "source": "inference",
+            "explanation": "重要程度为 4/5，映射为 80 分；该值由事项类型规则暂估。"
+          },
+          {
+            "key": "preparation",
+            "label": "处理准备时间",
+            "weight": 10,
+            "score": 13,
+            "points": 1,
+            "source": "inference",
+            "explanation": "预计准备 1 天，还有 7 天；准备时间越接近或超过剩余时间，得分越高。"
+          },
+          {
+            "key": "completeness",
+            "label": "信息完整程度",
+            "weight": 15,
+            "score": 65,
+            "points": 10,
+            "source": "inference",
+            "explanation": "综合期限、金额、重要性、准备时间的来源与确认状态；用户核对的信息得分最高，推断和未核实信息会降低本项得分。"
+          }
+        ],
+        "missingInformation": [
+          "重要程度未填写，暂按4/5计算，请确认",
+          "准备时间未填写，暂按1 天计算，请确认"
+        ],
+        "ruleVersion": "lifeguard-rules-1.0",
+        "summary": "当前优先级主要由时间紧迫程度、事项重要程度贡献。仍有 2 项信息需要补充或核实。"
+      }
+    },
+    {
+      "id": "matter-refund",
+      "title": "保温杯质量问题退款",
+      "merchant": "日用优选",
+      "type": "purchase",
+      "status": "completed",
+      "risk": "low",
+      "amount": 159,
+      "currency": "CNY",
+      "dueDate": "2026-10-30",
+      "completedOn": "2026-10-29",
+      "outcome": "已退款",
+      "savedAmount": 159,
+      "description": "售后退款已原路退回。",
+      "nextAction": "已完成",
+      "source": "demo",
+      "provenance": {
+        "dueDate": {
+          "source": "user",
+          "confirmed": true,
+          "note": "既有工作区记录，已由用户确认或属于虚构演示数据。"
+        },
+        "amount": {
+          "source": "user",
+          "confirmed": true,
+          "note": "既有工作区记录，已由用户确认或属于虚构演示数据。"
+        }
+      },
+      "assessment": {
+        "score": 0,
+        "level": "low",
+        "factors": [
+          {
+            "key": "time",
+            "label": "时间紧迫程度",
+            "weight": 40,
+            "score": 0,
+            "points": 0,
+            "source": "user",
+            "explanation": "事项当前不参与待处理优先级排序，原评估因素保留在历史记录中。"
+          },
+          {
+            "key": "loss",
+            "label": "潜在经济损失",
+            "weight": 25,
+            "score": 0,
+            "points": 0,
+            "source": "user",
+            "explanation": "事项当前不参与待处理优先级排序，原评估因素保留在历史记录中。"
+          },
+          {
+            "key": "importance",
+            "label": "事项重要程度",
+            "weight": 15,
+            "score": 0,
+            "points": 0,
+            "source": "inference",
+            "explanation": "事项当前不参与待处理优先级排序，原评估因素保留在历史记录中。"
+          },
+          {
+            "key": "preparation",
+            "label": "处理准备时间",
+            "weight": 10,
+            "score": 0,
+            "points": 0,
+            "source": "inference",
+            "explanation": "事项当前不参与待处理优先级排序，原评估因素保留在历史记录中。"
+          },
+          {
+            "key": "completeness",
+            "label": "信息完整程度",
+            "weight": 10,
+            "score": 0,
+            "points": 0,
+            "source": "inference",
+            "explanation": "事项当前不参与待处理优先级排序，原评估因素保留在历史记录中。"
+          }
+        ],
+        "ruleVersion": "lifeguard-rules-1.0",
+        "missingInformation": [
+          "重要程度未填写，暂按3/5计算，请确认",
+          "准备时间未填写，暂按2 天计算，请确认"
+        ],
+        "summary": "事项已完成，优先级归零；可恢复待处理后重新计算。"
+      }
+    },
+    {
+      "id": "matter-cancelled",
+      "title": "音乐会员重复订阅取消",
+      "merchant": "知音音乐",
+      "type": "subscription",
+      "status": "completed",
+      "risk": "low",
+      "amount": 15,
+      "currency": "CNY",
+      "dueDate": "2026-10-23",
+      "completedOn": "2026-10-22",
+      "outcome": "已取消续费",
+      "savedAmount": 180,
+      "description": "已取消重复会员，按剩余年度周期记录预计少支出金额。",
+      "nextAction": "已完成",
+      "source": "demo",
+      "provenance": {
+        "dueDate": {
+          "source": "user",
+          "confirmed": true,
+          "note": "既有工作区记录，已由用户确认或属于虚构演示数据。"
+        },
+        "amount": {
+          "source": "user",
+          "confirmed": true,
+          "note": "既有工作区记录，已由用户确认或属于虚构演示数据。"
+        }
+      },
+      "assessment": {
+        "score": 0,
+        "level": "low",
+        "factors": [
+          {
+            "key": "time",
+            "label": "时间紧迫程度",
+            "weight": 40,
+            "score": 0,
+            "points": 0,
+            "source": "user",
+            "explanation": "事项当前不参与待处理优先级排序，原评估因素保留在历史记录中。"
+          },
+          {
+            "key": "loss",
+            "label": "潜在经济损失",
+            "weight": 20,
+            "score": 0,
+            "points": 0,
+            "source": "user",
+            "explanation": "事项当前不参与待处理优先级排序，原评估因素保留在历史记录中。"
+          },
+          {
+            "key": "importance",
+            "label": "事项重要程度",
+            "weight": 15,
+            "score": 0,
+            "points": 0,
+            "source": "inference",
+            "explanation": "事项当前不参与待处理优先级排序，原评估因素保留在历史记录中。"
+          },
+          {
+            "key": "preparation",
+            "label": "处理准备时间",
+            "weight": 10,
+            "score": 0,
+            "points": 0,
+            "source": "inference",
+            "explanation": "事项当前不参与待处理优先级排序，原评估因素保留在历史记录中。"
+          },
+          {
+            "key": "completeness",
+            "label": "信息完整程度",
+            "weight": 15,
+            "score": 0,
+            "points": 0,
+            "source": "inference",
+            "explanation": "事项当前不参与待处理优先级排序，原评估因素保留在历史记录中。"
+          }
+        ],
+        "ruleVersion": "lifeguard-rules-1.0",
+        "missingInformation": [
+          "重要程度未填写，暂按3/5计算，请确认",
+          "准备时间未填写，暂按1 天计算，请确认"
+        ],
+        "summary": "事项已完成，优先级归零；可恢复待处理后重新计算。"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": "7607fa84-5bd2-45e6-bc8b-4ded3fe0dcaa",
+      "matterId": "c8cbd9a6-57a1-4b13-8814-64f1b60cc424",
+      "title": "浏览器验收材料决策方案",
+      "summary": "优先级 26/100，先核实信息，再按“查看行动清单并处理下一步”推进并保存结果。",
+      "generationMode": "rule",
+      "updatedAt": "2026-11-07T09:29:36.363Z",
+      "analysis": "缴费办理“浏览器验收材料”当前优先级为 26/100。当前优先级主要由事项重要程度、信息完整程度贡献。仍有 3 项信息需要补充或核实。 建议完成时间只依据已核实的期限生成，规则版本为 lifeguard-rules-1.0。",
+      "risks": [
+        "期限风险：缺少截止日期，无法判断剩余办理窗口。",
+        "金额提示：当前记录 ¥19.90 仅用于优先级排序，不代表确定损失、退款或赔付结果。",
+        "信息可靠性：缴费或办理截止日尚未提供；重要程度未填写，暂按4/5计算，请确认；准备时间未填写，暂按1 天计算，请确认。"
+      ],
+      "recommendedAction": "查看行动清单并处理下一步",
+      "suggestedCompletionDate": null,
+      "recommendationReason": "截止日尚未提供，因此不生成建议完成日期。",
+      "ruleVersion": "lifeguard-rules-1.0",
+      "steps": [
+        {
+          "id": "85a5d61c-e750-41db-8fda-a631393f9f08",
+          "key": "verify-facts",
+          "title": "核实关键信息与适用规则",
+          "detail": "先处理这些信息缺口：缴费或办理截止日尚未提供；重要程度未填写，暂按4/5计算，请确认；准备时间未填写，暂按1 天计算，请确认。核实前不要把候选值当作确定事实。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "91a7a76a-6cd9-4aae-a97c-e6065cd7296e",
+          "key": "verify-payment",
+          "title": "核对缴费通知与官方入口",
+          "detail": "确认收款机构、金额、截止日和支付渠道，不通过来历不明的链接付款。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "5cef63fd-c40e-48e5-80b6-43810ef2fe62",
+          "key": "finish-payment",
+          "title": "完成办理并核对到账状态",
+          "detail": "在官方入口办理后检查状态，若未及时到账，使用回执联系办理机构。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "6bb9f8bb-500c-47a0-a6e1-4aa9e44afc21",
+          "key": "save-result",
+          "title": "保存处理结果并更新记录",
+          "detail": "记录实际结果、日期和相关凭证；只有你明确确认的金额才计入少支出统计。",
+          "required": true,
+          "done": false
+        }
+      ],
+      "materials": [
+        "正式缴费通知",
+        "官方办理入口",
+        "支付凭证",
+        "到账或办理回执"
+      ],
+      "script": "你好，我需要处理“浏览器验收材料”相关事项。请协助核对缴费金额、截止日期、官方办理入口和回执获取方式；如已办理，请确认到账状态，谢谢。"
+    },
+    {
+      "id": "d6660ab8-6fd1-4137-8326-1f8c25df149d",
+      "matterId": "77136238-e4dd-45c6-8715-7a773bef5198",
+      "title": "浏览器验收事项（已编辑）决策方案",
+      "summary": "优先级 28/100，先核实信息，再按“核对记录并完成测试”推进并保存结果。",
+      "generationMode": "rule",
+      "updatedAt": "2026-11-07T09:29:36.363Z",
+      "analysis": "退货售后“浏览器验收事项（已编辑）”当前优先级为 28/100。当前优先级主要由信息完整程度、事项重要程度贡献。关键信息均已核对。 建议完成时间只依据已核实的期限生成，规则版本为 lifeguard-rules-1.0。",
+      "risks": [
+        "期限安排：按当前记录还有 54 天，仍需为材料补正和沟通等待留出时间。",
+        "金额提示：当前记录 ¥88.50 仅用于优先级排序，不代表确定损失、退款或赔付结果。"
+      ],
+      "recommendedAction": "核对记录并完成测试",
+      "suggestedCompletionDate": "2026-12-30",
+      "recommendationReason": "按已核实的截止日期预留 1 天处理与补正时间；这只是安排建议，不改变原期限。",
+      "ruleVersion": "lifeguard-rules-1.0",
+      "steps": [
+        {
+          "id": "7d40697d-8d0e-41aa-9eca-d7d75ecee236",
+          "key": "verify-facts",
+          "title": "复核关键信息与适用规则",
+          "detail": "关键信息已经核对，仍需保存原始材料和后续处理凭证。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "11ec7103-e591-4fe6-8bd3-644d020535e3",
+          "key": "prepare-evidence",
+          "title": "整理订单与商品证据",
+          "detail": "准备订单、支付记录、商品现状和已有沟通内容，不覆盖原始文件。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "bfc3010f-6acc-4375-935c-40d50971588c",
+          "key": "submit-request",
+          "title": "向商家提交售后请求",
+          "detail": "通过订单或商家正式入口说明诉求，先核实适用规则、寄回要求和受理编号。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "b77a24aa-874e-46bc-8440-f4c6834a37e8",
+          "key": "save-result",
+          "title": "保存处理结果并更新记录",
+          "detail": "记录实际结果、日期和相关凭证；只有你明确确认的金额才计入少支出统计。",
+          "required": true,
+          "done": false
+        }
+      ],
+      "materials": [
+        "订单与支付凭证",
+        "商品及配件照片",
+        "商家规则与沟通记录",
+        "售后受理或物流凭证"
+      ],
+      "script": "你好，我需要处理“浏览器验收事项（已编辑）”相关事项。请依据订单内容和贵方现行售后规则，协助确认可申请的处理方式、所需材料、办理期限及结果凭证。我的诉求以双方后续确认记录为准，谢谢。"
+    },
+    {
+      "id": "d7091d4b-807b-489d-b213-43b007c0454f",
+      "matterId": "matter-cancelled",
+      "title": "音乐会员重复订阅取消决策方案",
+      "summary": "事项已退出待处理队列，以下方案保留用于追溯。",
+      "generationMode": "rule",
+      "updatedAt": "2026-11-07T09:29:36.364Z",
+      "analysis": "订阅续费“音乐会员重复订阅取消”当前优先级为 0/100。事项已完成，优先级归零；可恢复待处理后重新计算。 建议完成时间只依据已核实的期限生成，规则版本为 lifeguard-rules-1.0。",
+      "risks": [
+        "期限风险：所记录日期已过去 15 天，需要核实当前办理状态。",
+        "金额提示：当前记录 ¥15 仅用于优先级排序，不代表确定损失、退款或赔付结果。",
+        "准备风险：预计准备 1 天，已接近或超过剩余时间，可能需要并行准备材料。",
+        "信息可靠性：重要程度未填写，暂按3/5计算，请确认；准备时间未填写，暂按1 天计算，请确认。"
+      ],
+      "recommendedAction": "查看已记录的处理结果；如需继续办理，请恢复待处理后重新评估。",
+      "suggestedCompletionDate": null,
+      "recommendationReason": "事项当前不参与待处理时间安排。",
+      "ruleVersion": "lifeguard-rules-1.0",
+      "steps": [
+        {
+          "id": "12e46796-040c-46fe-a2b3-3672e87f6014",
+          "key": "verify-facts",
+          "title": "核实关键信息与适用规则",
+          "detail": "先处理这些信息缺口：重要程度未填写，暂按3/5计算，请确认；准备时间未填写，暂按1 天计算，请确认。核实前不要把候选值当作确定事实。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "38e283ff-580a-475a-81e7-ab37d2d0aa67",
+          "key": "review-usage",
+          "title": "检查会员权益与续费渠道",
+          "detail": "确认当前周期、使用需求、续费金额以及管理自动续费的原始支付渠道。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "8580ed88-c664-48a8-b3c2-754876eebe4e",
+          "key": "manage-renewal",
+          "title": "按保留或取消决定处理续费",
+          "detail": "不再需要时，在会员或原支付渠道关闭自动续费；不要假设卸载应用等同于取消。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "2960f37b-dd05-45e9-a4bb-167928147ec8",
+          "key": "save-result",
+          "title": "保存处理结果并更新记录",
+          "detail": "记录实际结果、日期和相关凭证；只有你明确确认的金额才计入少支出统计。",
+          "required": true,
+          "done": false
+        }
+      ],
+      "materials": [
+        "会员账号与当前周期截图",
+        "续费金额与扣款记录",
+        "自动续费管理页面",
+        "处理结果截图"
+      ],
+      "script": "你好，我需要处理“音乐会员重复订阅取消”相关事项。请协助确认当前会员周期、下次续费时间和金额，以及管理自动续费的正式入口。若我提交取消操作，请提供可保存的结果凭证，谢谢。"
+    },
+    {
+      "id": "d8e0e7d8-feaa-457a-b549-d1bb9629cf40",
+      "matterId": "matter-refund",
+      "title": "保温杯质量问题退款决策方案",
+      "summary": "事项已退出待处理队列，以下方案保留用于追溯。",
+      "generationMode": "rule",
+      "updatedAt": "2026-11-07T09:29:36.364Z",
+      "analysis": "退货售后“保温杯质量问题退款”当前优先级为 0/100。事项已完成，优先级归零；可恢复待处理后重新计算。 建议完成时间只依据已核实的期限生成，规则版本为 lifeguard-rules-1.0。",
+      "risks": [
+        "期限风险：所记录日期已过去 8 天，需要核实当前办理状态。",
+        "金额提示：当前记录 ¥159 仅用于优先级排序，不代表确定损失、退款或赔付结果。",
+        "准备风险：预计准备 2 天，已接近或超过剩余时间，可能需要并行准备材料。",
+        "信息可靠性：重要程度未填写，暂按3/5计算，请确认；准备时间未填写，暂按2 天计算，请确认。"
+      ],
+      "recommendedAction": "查看已记录的处理结果；如需继续办理，请恢复待处理后重新评估。",
+      "suggestedCompletionDate": null,
+      "recommendationReason": "事项当前不参与待处理时间安排。",
+      "ruleVersion": "lifeguard-rules-1.0",
+      "steps": [
+        {
+          "id": "bab52132-670f-428f-8d54-3e618d2507a1",
+          "key": "verify-facts",
+          "title": "核实关键信息与适用规则",
+          "detail": "先处理这些信息缺口：重要程度未填写，暂按3/5计算，请确认；准备时间未填写，暂按2 天计算，请确认。核实前不要把候选值当作确定事实。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "d18f0428-b8dd-4b0f-9d7d-06073c40a536",
+          "key": "prepare-evidence",
+          "title": "整理订单与商品证据",
+          "detail": "准备订单、支付记录、商品现状和已有沟通内容，不覆盖原始文件。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "2f29511b-a520-4b5b-928f-364f39711bfa",
+          "key": "submit-request",
+          "title": "向商家提交售后请求",
+          "detail": "通过订单或商家正式入口说明诉求，先核实适用规则、寄回要求和受理编号。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "741b6146-9f83-40fa-8129-9d7a331a17bd",
+          "key": "save-result",
+          "title": "保存处理结果并更新记录",
+          "detail": "记录实际结果、日期和相关凭证；只有你明确确认的金额才计入少支出统计。",
+          "required": true,
+          "done": false
+        }
+      ],
+      "materials": [
+        "订单与支付凭证",
+        "商品及配件照片",
+        "商家规则与沟通记录",
+        "售后受理或物流凭证"
+      ],
+      "script": "你好，我需要处理“保温杯质量问题退款”相关事项。请依据订单内容和贵方现行售后规则，协助确认可申请的处理方式、所需材料、办理期限及结果凭证。我的诉求以双方后续确认记录为准，谢谢。"
+    },
+    {
+      "id": "143566cc-9b33-4ed4-b784-439192768610",
+      "matterId": "matter-payment",
+      "title": "下学期住宿费缴纳决策方案",
+      "summary": "优先级 73/100，先核实信息，再按“完成缴费并上传回执”推进并保存结果。",
+      "generationMode": "rule",
+      "updatedAt": "2026-11-07T09:29:36.364Z",
+      "analysis": "缴费办理“下学期住宿费缴纳”当前优先级为 73/100。当前优先级主要由时间紧迫程度、事项重要程度贡献。仍有 2 项信息需要补充或核实。 建议完成时间只依据已核实的期限生成，规则版本为 lifeguard-rules-1.0。",
+      "risks": [
+        "期限安排：按当前记录还有 7 天，仍需为材料补正和沟通等待留出时间。",
+        "金额提示：当前记录 ¥1,200 仅用于优先级排序，不代表确定损失、退款或赔付结果。",
+        "信息可靠性：重要程度未填写，暂按4/5计算，请确认；准备时间未填写，暂按1 天计算，请确认。"
+      ],
+      "recommendedAction": "完成缴费并上传回执",
+      "suggestedCompletionDate": "2026-11-13",
+      "recommendationReason": "按已核实的截止日期预留 1 天处理与补正时间；这只是安排建议，不改变原期限。",
+      "ruleVersion": "lifeguard-rules-1.0",
+      "steps": [
+        {
+          "id": "a9033790-6c46-4d0e-a88f-6bac450173ab",
+          "key": "verify-facts",
+          "title": "核实关键信息与适用规则",
+          "detail": "先处理这些信息缺口：重要程度未填写，暂按4/5计算，请确认；准备时间未填写，暂按1 天计算，请确认。核实前不要把候选值当作确定事实。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "7004a5d4-b040-47c3-99d9-ec4f5171196e",
+          "key": "verify-payment",
+          "title": "核对缴费通知与官方入口",
+          "detail": "确认收款机构、金额、截止日和支付渠道，不通过来历不明的链接付款。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "509073c6-c70e-4e1d-9017-a25c66374ca3",
+          "key": "finish-payment",
+          "title": "完成办理并核对到账状态",
+          "detail": "在官方入口办理后检查状态，若未及时到账，使用回执联系办理机构。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "c60880e5-2c04-4d8c-a210-d6d46e0aac99",
+          "key": "save-result",
+          "title": "保存处理结果并更新记录",
+          "detail": "记录实际结果、日期和相关凭证；只有你明确确认的金额才计入少支出统计。",
+          "required": true,
+          "done": false
+        }
+      ],
+      "materials": [
+        "正式缴费通知",
+        "官方办理入口",
+        "支付凭证",
+        "到账或办理回执"
+      ],
+      "script": "你好，我需要处理“下学期住宿费缴纳”相关事项。请协助核对缴费金额、截止日期、官方办理入口和回执获取方式；如已办理，请确认到账状态，谢谢。"
+    },
+    {
+      "id": "f730f2fa-7f78-4407-bc74-4084c4b14440",
+      "matterId": "matter-course",
+      "title": "英语进阶课程有效期决策方案",
+      "summary": "优先级 59/100，先核实信息，再按“预约剩余课程并导出学习资料”推进并保存结果。",
+      "generationMode": "rule",
+      "updatedAt": "2026-11-07T09:29:36.364Z",
+      "analysis": "课程有效期“英语进阶课程有效期”当前优先级为 59/100。当前优先级主要由时间紧迫程度、潜在经济损失贡献。仍有 2 项信息需要补充或核实。 建议完成时间只依据已核实的期限生成，规则版本为 lifeguard-rules-1.0。",
+      "risks": [
+        "期限安排：按当前记录还有 12 天，仍需为材料补正和沟通等待留出时间。",
+        "金额提示：当前记录 ¥2,399 仅用于优先级排序，不代表确定损失、退款或赔付结果。",
+        "信息可靠性：重要程度未填写，暂按3/5计算，请确认；准备时间未填写，暂按2 天计算，请确认。"
+      ],
+      "recommendedAction": "预约剩余课程并导出学习资料",
+      "suggestedCompletionDate": "2026-11-18",
+      "recommendationReason": "按已核实的截止日期预留 1 天处理与补正时间；这只是安排建议，不改变原期限。",
+      "ruleVersion": "lifeguard-rules-1.0",
+      "steps": [
+        {
+          "id": "f2cdd837-c955-4a93-a25d-234631e59859",
+          "key": "verify-facts",
+          "title": "核实关键信息与适用规则",
+          "detail": "先处理这些信息缺口：重要程度未填写，暂按3/5计算，请确认；准备时间未填写，暂按2 天计算，请确认。核实前不要把候选值当作确定事实。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "d5156233-df1b-4c1d-a21b-58ebf712b83d",
+          "key": "inventory-course",
+          "title": "盘点剩余课程与学习权益",
+          "detail": "核对剩余课时、直播安排、资料下载和有效期，记录仍未使用的部分。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "7855f65e-ee47-4231-8263-0391c124a7a2",
+          "key": "schedule-course",
+          "title": "预约课程并保存学习资料",
+          "detail": "根据剩余时间安排可完成的课程；如有争议，先向机构核实其公示规则。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "41dddf46-e08c-4721-9a19-016c1f717f82",
+          "key": "save-result",
+          "title": "保存处理结果并更新记录",
+          "detail": "记录实际结果、日期和相关凭证；只有你明确确认的金额才计入少支出统计。",
+          "required": true,
+          "done": false
+        }
+      ],
+      "materials": [
+        "课程订单与支付凭证",
+        "课程目录及剩余课时",
+        "机构有效期规则",
+        "预约和学习记录"
+      ],
+      "script": "你好，我需要处理“英语进阶课程有效期”相关事项。请依据课程订单和贵方公示规则，协助确认剩余课时、有效期、预约方式及可下载资料，并提供可保存的确认记录，谢谢。"
+    },
+    {
+      "id": "action-return",
+      "matterId": "matter-headphones",
+      "title": "降噪耳机退货决策方案",
+      "summary": "优先级 86/100，先核实信息，再按“提交退货申请并上传商品照片”推进并保存结果。",
+      "generationMode": "rule",
+      "updatedAt": "2026-11-07T09:29:36.363Z",
+      "steps": [
+        {
+          "id": "d66cc57e-7acb-4962-a22f-fe4f7e5c0186",
+          "key": "verify-facts",
+          "title": "核实关键信息与适用规则",
+          "detail": "先处理这些信息缺口：重要程度未填写，暂按3/5计算，请确认；准备时间未填写，暂按2 天计算，请确认。核实前不要把候选值当作确定事实。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "return-1",
+          "key": "prepare-evidence",
+          "title": "整理订单与商品证据",
+          "detail": "准备订单、支付记录、商品现状和已有沟通内容，不覆盖原始文件。",
+          "required": true,
+          "done": true
+        },
+        {
+          "id": "return-2",
+          "key": "submit-request",
+          "title": "向商家提交售后请求",
+          "detail": "通过订单或商家正式入口说明诉求，先核实适用规则、寄回要求和受理编号。",
+          "required": true,
+          "done": true
+        },
+        {
+          "id": "return-3",
+          "key": "save-result",
+          "title": "保存处理结果并更新记录",
+          "detail": "记录实际结果、日期和相关凭证；只有你明确确认的金额才计入少支出统计。",
+          "required": true,
+          "done": false
+        }
+      ],
+      "materials": [
+        "订单与支付凭证",
+        "商品及配件照片",
+        "商家规则与沟通记录",
+        "售后受理或物流凭证"
+      ],
+      "script": "你好，我需要处理“降噪耳机退货”相关事项。请依据订单内容和贵方现行售后规则，协助确认可申请的处理方式、所需材料、办理期限及结果凭证。我的诉求以双方后续确认记录为准，谢谢。",
+      "analysis": "退货售后“降噪耳机退货”当前优先级为 86/100。当前优先级主要由时间紧迫程度、潜在经济损失贡献。仍有 2 项信息需要补充或核实。 建议完成时间只依据已核实的期限生成，规则版本为 lifeguard-rules-1.0。",
+      "risks": [
+        "期限风险：今天就是所记录截止日，应先完成关键动作并留存受理凭证。",
+        "金额提示：当前记录 ¥1,299 仅用于优先级排序，不代表确定损失、退款或赔付结果。",
+        "准备风险：预计准备 2 天，已接近或超过剩余时间，可能需要并行准备材料。",
+        "信息可靠性：重要程度未填写，暂按3/5计算，请确认；准备时间未填写，暂按2 天计算，请确认。"
+      ],
+      "recommendedAction": "提交退货申请并上传商品照片",
+      "suggestedCompletionDate": "2026-11-07",
+      "recommendationReason": "所记录期限已到期或已经过去，建议今天先联系相关方核实当前办理状态。",
+      "ruleVersion": "lifeguard-rules-1.0"
+    },
+    {
+      "id": "action-subscription",
+      "matterId": "matter-video",
+      "title": "云享视频会员续费决策方案",
+      "summary": "优先级 61/100，先核实信息，再按“确认是否保留，不需要则取消自动续费”推进并保存结果。",
+      "generationMode": "rule",
+      "updatedAt": "2026-11-07T09:29:36.363Z",
+      "steps": [
+        {
+          "id": "f9825c2f-f871-4283-a913-9eb229324950",
+          "key": "verify-facts",
+          "title": "核实关键信息与适用规则",
+          "detail": "先处理这些信息缺口：重要程度未填写，暂按3/5计算，请确认；准备时间未填写，暂按1 天计算，请确认。核实前不要把候选值当作确定事实。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "sub-1",
+          "key": "review-usage",
+          "title": "检查会员权益与续费渠道",
+          "detail": "确认当前周期、使用需求、续费金额以及管理自动续费的原始支付渠道。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "sub-2",
+          "key": "manage-renewal",
+          "title": "按保留或取消决定处理续费",
+          "detail": "不再需要时，在会员或原支付渠道关闭自动续费；不要假设卸载应用等同于取消。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "sub-3",
+          "key": "save-result",
+          "title": "保存处理结果并更新记录",
+          "detail": "记录实际结果、日期和相关凭证；只有你明确确认的金额才计入少支出统计。",
+          "required": true,
+          "done": false
+        }
+      ],
+      "materials": [
+        "会员账号与当前周期截图",
+        "续费金额与扣款记录",
+        "自动续费管理页面",
+        "处理结果截图"
+      ],
+      "script": "你好，我需要处理“云享视频会员续费”相关事项。请协助确认当前会员周期、下次续费时间和金额，以及管理自动续费的正式入口。若我提交取消操作，请提供可保存的结果凭证，谢谢。",
+      "analysis": "订阅续费“云享视频会员续费”当前优先级为 61/100。当前优先级主要由时间紧迫程度、信息完整程度贡献。仍有 2 项信息需要补充或核实。 建议完成时间只依据已核实的期限生成，规则版本为 lifeguard-rules-1.0。",
+      "risks": [
+        "期限风险：仅剩 2 天，应先完成关键动作并留存受理凭证。",
+        "金额提示：当前记录 ¥25 仅用于优先级排序，不代表确定损失、退款或赔付结果。",
+        "信息可靠性：重要程度未填写，暂按3/5计算，请确认；准备时间未填写，暂按1 天计算，请确认。"
+      ],
+      "recommendedAction": "确认是否保留，不需要则取消自动续费",
+      "suggestedCompletionDate": "2026-11-08",
+      "recommendationReason": "按已核实的截止日期预留 1 天处理与补正时间；这只是安排建议，不改变原期限。",
+      "ruleVersion": "lifeguard-rules-1.0"
+    },
+    {
+      "id": "action-lease",
+      "matterId": "matter-lease",
+      "title": "青年公寓退租通知决策方案",
+      "summary": "优先级 85/100，先核实信息，再按“发送退租通知并预约验房”推进并保存结果。",
+      "generationMode": "rule",
+      "updatedAt": "2026-11-07T09:29:36.363Z",
+      "steps": [
+        {
+          "id": "186bfd97-7ea3-4411-8cde-d7dca00f88d9",
+          "key": "verify-facts",
+          "title": "核实关键信息与适用规则",
+          "detail": "先处理这些信息缺口：重要程度未填写，暂按5/5计算，请确认；准备时间未填写，暂按7 天计算，请确认；合同待履行义务尚未提供，请核对合同文本。核实前不要把候选值当作确定事实。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "b126c479-77ba-41ef-9192-a835e6a667ec",
+          "key": "review-contract",
+          "title": "逐条核对合同义务与通知方式",
+          "detail": "确认到期日、通知期限、交接、费用和押金条款；口头承诺不能替代合同核对。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "lease-1",
+          "key": "arrange-handover",
+          "title": "按合同方式通知并预约交接",
+          "detail": "使用合同约定的通知渠道保留送达记录，预约验房、抄表和钥匙交接。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "lease-4",
+          "key": "save-result",
+          "title": "保存处理结果并更新记录",
+          "detail": "记录实际结果、日期和相关凭证；只有你明确确认的金额才计入少支出统计。",
+          "required": true,
+          "done": false
+        }
+      ],
+      "materials": [
+        "完整租赁合同与补充协议",
+        "通知及送达记录",
+        "房屋照片与交接清单",
+        "费用和押金结算明细"
+      ],
+      "script": "你好，我需要处理“青年公寓退租通知”相关事项。请依据完整租赁合同及补充协议，协助确认通知方式、交接安排、费用结算和押金处理流程。具体权利义务以合同文本、事实情况及适用规则为准，谢谢。",
+      "analysis": "租赁合同“青年公寓退租通知”当前优先级为 85/100。当前优先级主要由时间紧迫程度、事项重要程度贡献。仍有 3 项信息需要补充或核实。 建议完成时间只依据已核实的期限生成，规则版本为 lifeguard-rules-1.0。",
+      "risks": [
+        "期限安排：按当前记录还有 5 天，仍需为材料补正和沟通等待留出时间。",
+        "金额提示：当前记录 ¥3,500 仅用于优先级排序，不代表确定损失、退款或赔付结果。",
+        "准备风险：预计准备 7 天，已接近或超过剩余时间，可能需要并行准备材料。",
+        "信息可靠性：重要程度未填写，暂按5/5计算，请确认；准备时间未填写，暂按7 天计算，请确认；合同待履行义务尚未提供，请核对合同文本。",
+        "合同提示：通知、交接、违约与押金安排必须结合合同文本、实际履行情况和适用规则核实。"
+      ],
+      "recommendedAction": "发送退租通知并预约验房",
+      "suggestedCompletionDate": "2026-11-08",
+      "recommendationReason": "按已核实的截止日期预留 4 天处理与补正时间；这只是安排建议，不改变原期限。",
+      "ruleVersion": "lifeguard-rules-1.0"
+    },
+    {
+      "id": "action-warranty",
+      "matterId": "matter-tablet",
+      "title": "平板电脑保修到期决策方案",
+      "summary": "优先级 39/100，先核实信息，再按“备份设备并预约售后检测”推进并保存结果。",
+      "generationMode": "rule",
+      "updatedAt": "2026-11-07T09:29:36.363Z",
+      "steps": [
+        {
+          "id": "730e9665-862e-4e5a-8fb4-0355c7e08fa4",
+          "key": "verify-facts",
+          "title": "核实关键信息与适用规则",
+          "detail": "先处理这些信息缺口：重要程度未填写，暂按4/5计算，请确认；准备时间未填写，暂按3 天计算，请确认。核实前不要把候选值当作确定事实。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "warranty-1",
+          "key": "backup-device",
+          "title": "备份资料并记录设备信息",
+          "detail": "完成个人数据备份，记录序列号和故障现象，核对送修前账号处理要求。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "warranty-2",
+          "key": "book-inspection",
+          "title": "预约检测并确认保修范围",
+          "detail": "向销售方或官方售后描述故障，依据购买凭证和保修条款确认检测安排。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "4901dd75-e756-4936-bbee-928530ac47cf",
+          "key": "save-result",
+          "title": "保存处理结果并更新记录",
+          "detail": "记录实际结果、日期和相关凭证；只有你明确确认的金额才计入少支出统计。",
+          "required": true,
+          "done": false
+        }
+      ],
+      "materials": [
+        "购买发票或订单",
+        "设备序列号",
+        "故障照片或视频",
+        "检测与维修记录"
+      ],
+      "script": "你好，我需要处理“平板电脑保修到期”相关事项。请依据购买凭证和保修条款，协助确认故障检测安排、保修范围、所需材料及数据处理注意事项，并提供检测或受理记录，谢谢。",
+      "analysis": "保修“平板电脑保修到期”当前优先级为 39/100。当前优先级主要由时间紧迫程度、事项重要程度贡献。仍有 2 项信息需要补充或核实。 建议完成时间只依据已核实的期限生成，规则版本为 lifeguard-rules-1.0。",
+      "risks": [
+        "期限安排：按当前记录还有 18 天，仍需为材料补正和沟通等待留出时间。",
+        "金额提示：当前记录 ¥500 仅用于优先级排序，不代表确定损失、退款或赔付结果。",
+        "信息可靠性：重要程度未填写，暂按4/5计算，请确认；准备时间未填写，暂按3 天计算，请确认。"
+      ],
+      "recommendedAction": "备份设备并预约售后检测",
+      "suggestedCompletionDate": "2026-11-23",
+      "recommendationReason": "按已核实的截止日期预留 2 天处理与补正时间；这只是安排建议，不改变原期限。",
+      "ruleVersion": "lifeguard-rules-1.0"
+    }
+  ],
+  "materials": [
+    {
+      "id": "e76d4c10-251e-4a0b-8160-d7816bdd4ca6",
+      "name": "validation-pixel.png",
+      "size": 68,
+      "mimeType": "image/png",
+      "hash": "431ced6916a2a21a156e38701afe55bbd7f88969fbbfc56d7fe099d47f265460",
+      "status": "ready",
+      "source": "local",
+      "uploadedAt": "2026-11-07T09:29:09.537Z",
+      "recognitionProgress": 100,
+      "recognitionStage": "已确认",
+      "message": "已由你确认并生成生活事项。",
+      "fields": [
+        {
+          "key": "title",
+          "label": "事项名称",
+          "value": "浏览器验收材料",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "已由你修改，确认后以填写值为准"
+        },
+        {
+          "key": "merchant",
+          "label": "商家 / 机构",
+          "value": "本地材料商家",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "已由你修改，确认后以填写值为准"
+        },
+        {
+          "key": "amount",
+          "label": "金额",
+          "value": "19.90",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "已由你修改，确认后以填写值为准"
+        },
+        {
+          "key": "billing_cycle",
+          "label": "续费周期",
+          "value": "",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "purchase_date",
+          "label": "购买 / 下单日期",
+          "value": "2026-11-20",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "已由你修改，确认后以填写值为准"
+        },
+        {
+          "key": "effective_date",
+          "label": "生效日期",
+          "value": "",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "expiry_date",
+          "label": "到期 / 退货截止日期",
+          "value": "",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "renewal_date",
+          "label": "下次续费日期",
+          "value": "",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "description",
+          "label": "描述 / 备注",
+          "value": "",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        }
+      ],
+      "recognition": {
+        "document_type": "其他",
+        "title": "浏览器验收材料",
+        "amount": "19.90",
+        "currency": "CNY",
+        "billing_cycle": null,
+        "purchase_date": "2026-11-20",
+        "effective_date": null,
+        "expiry_date": null,
+        "renewal_date": null,
+        "merchant": "本地材料商家",
+        "description": "",
+        "confidence": {},
+        "need_confirmation": []
+      },
+      "recognitionEngine": "browser-ocr",
+      "extractionNote": "图片已在浏览器内完成中英文 OCR"
+    },
+    {
+      "id": "material-keyboard",
+      "name": "键盘订单截图.png",
+      "size": 1843200,
+      "mimeType": "image/png",
+      "status": "awaiting_confirmation",
+      "uploadedAt": "2026-11-07T07:29:04.472Z",
+      "source": "demo",
+      "recognitionEngine": "demo",
+      "message": "预置识别样例，仅用于体验字段确认流程。",
+      "recognition": {
+        "document_type": "订单",
+        "title": "机械键盘退货",
+        "amount": "499",
+        "currency": "CNY",
+        "billing_cycle": null,
+        "purchase_date": null,
+        "effective_date": null,
+        "expiry_date": "2026-11-11",
+        "renewal_date": null,
+        "merchant": "键物外设店",
+        "description": "",
+        "confidence": {
+          "document_type": 88,
+          "title": 94,
+          "amount": 97,
+          "merchant": 91
+        },
+        "need_confirmation": [
+          "expiry_date"
+        ]
+      },
+      "fields": [
+        {
+          "key": "title",
+          "label": "事项名称",
+          "value": "机械键盘退货",
+          "confidence": 94,
+          "status": "pending",
+          "evidence": "商品：87 键机械键盘"
+        },
+        {
+          "key": "merchant",
+          "label": "商家",
+          "value": "键物外设店",
+          "confidence": 91,
+          "status": "pending",
+          "evidence": "店铺：键物外设店"
+        },
+        {
+          "key": "amount",
+          "label": "实付金额",
+          "value": "499",
+          "confidence": 97,
+          "status": "pending",
+          "evidence": "实付款 ¥499.00"
+        },
+        {
+          "key": "expiry_date",
+          "label": "退货截止日",
+          "value": "2026-11-11",
+          "confidence": null,
+          "status": "pending",
+          "evidence": "材料未包含明确期限，请人工确认"
+        }
+      ]
+    },
+    {
+      "id": "material-invoice",
+      "name": "平板电子发票.pdf",
+      "size": 862400,
+      "mimeType": "application/pdf",
+      "status": "ready",
+      "uploadedAt": "2026-11-06T06:29:04.472Z",
+      "source": "demo",
+      "recognitionEngine": "demo",
+      "message": "已确认并关联“平板电脑保修到期”。",
+      "recognition": {
+        "document_type": "保修",
+        "title": "平板电脑保修到期",
+        "amount": "4299",
+        "currency": "CNY",
+        "billing_cycle": null,
+        "purchase_date": null,
+        "effective_date": null,
+        "expiry_date": "2026-11-25",
+        "renewal_date": null,
+        "merchant": "星河数码",
+        "description": "",
+        "confidence": {
+          "document_type": 92,
+          "title": 96,
+          "amount": 98,
+          "merchant": 95
+        },
+        "need_confirmation": []
+      },
+      "fields": [
+        {
+          "key": "title",
+          "label": "事项名称",
+          "value": "平板电脑保修到期",
+          "confidence": 96,
+          "status": "confirmed",
+          "evidence": "平板电脑 256G"
+        },
+        {
+          "key": "merchant",
+          "label": "商家",
+          "value": "星河数码",
+          "confidence": 95,
+          "status": "confirmed",
+          "evidence": "销售方：星河数码"
+        },
+        {
+          "key": "amount",
+          "label": "实付金额",
+          "value": "4299",
+          "confidence": 98,
+          "status": "confirmed",
+          "evidence": "价税合计 ¥4299.00"
+        },
+        {
+          "key": "expiry_date",
+          "label": "保修截止日",
+          "value": "2026-11-25",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "用户根据保修规则人工确认"
+        }
+      ]
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": "sub-video",
+      "service": "云享视频",
+      "category": "影音娱乐",
+      "amount": 25,
+      "currency": "CNY",
+      "cycle": "monthly",
+      "nextRenewal": "2026-11-09",
+      "status": "active",
+      "autoRenew": true,
+      "source": "demo",
+      "notes": "视频会员，按月自动续费。",
+      "createdAt": "2026-10-08T09:29:04.472Z",
+      "updatedAt": "2026-11-07T07:29:04.472Z",
+      "duplicateState": "none"
+    },
+    {
+      "id": "sub-notes",
+      "service": "灵感笔记 Pro",
+      "category": "效率工具",
+      "amount": 18,
+      "currency": "CNY",
+      "cycle": "monthly",
+      "nextRenewal": "2026-11-12",
+      "status": "active",
+      "autoRenew": true,
+      "source": "demo",
+      "notes": "笔记同步与知识整理功能。",
+      "createdAt": "2026-10-09T05:29:04.472Z",
+      "updatedAt": "2026-11-07T09:29:36.273Z",
+      "duplicateGroup": "notes",
+      "duplicateState": "distinct"
+    },
+    {
+      "id": "sub-docs",
+      "service": "知墨文档",
+      "category": "效率工具",
+      "amount": 108,
+      "currency": "CNY",
+      "cycle": "yearly",
+      "nextRenewal": "2026-11-23",
+      "status": "active",
+      "autoRenew": true,
+      "source": "demo",
+      "notes": "在线文档与协作功能，可能与笔记工具存在部分交集。",
+      "createdAt": "2026-10-11T07:29:04.472Z",
+      "updatedAt": "2026-11-07T05:29:04.472Z",
+      "duplicateGroup": "notes",
+      "duplicateState": "candidate"
+    },
+    {
+      "id": "sub-design",
+      "service": "匠心设计 Cloud",
+      "category": "创意工具",
+      "amount": 588,
+      "currency": "CNY",
+      "cycle": "yearly",
+      "nextRenewal": "2026-12-05",
+      "status": "active",
+      "autoRenew": true,
+      "source": "demo",
+      "notes": "云端设计工具年度方案。",
+      "createdAt": "2026-10-17T13:29:04.472Z",
+      "updatedAt": "2026-11-07T04:29:04.472Z",
+      "duplicateState": "none"
+    },
+    {
+      "id": "sub-gym",
+      "service": "律动健身",
+      "category": "运动健康",
+      "amount": 199,
+      "currency": "CNY",
+      "cycle": "monthly",
+      "nextRenewal": "2026-11-19",
+      "status": "active",
+      "autoRenew": true,
+      "source": "demo",
+      "notes": "线下健身空间月度会员。",
+      "createdAt": "2026-10-21T17:29:04.472Z",
+      "updatedAt": "2026-11-07T03:29:04.472Z",
+      "duplicateState": "none"
+    }
+  ],
+  "activities": [
+    {
+      "id": "bbc6c585-2e0f-4e28-be13-1ef867d8f883",
+      "title": "保存隐私与偏好设置",
+      "description": "基础信息已保存在本地演示工作区",
+      "timestamp": "2026-11-07T09:29:37.008Z",
+      "kind": "settings"
+    },
+    {
+      "id": "b86e7301-2a91-441d-988a-1949ca471f2b",
+      "title": "确认识别字段",
+      "description": "validation-pixel.png已生成“浏览器验收材料”",
+      "timestamp": "2026-11-07T09:29:33.956Z",
+      "kind": "confirm"
+    },
+    {
+      "id": "8d03886c-e72c-418d-8f8a-323fb72432cc",
+      "title": "创建生活事项",
+      "description": "浏览器验收材料已保存，日期待确认",
+      "timestamp": "2026-11-07T09:29:33.956Z",
+      "kind": "confirm"
+    },
+    {
+      "id": "d265ed9a-a11c-4a65-ae5c-cb39655ac159",
+      "title": "材料已保存在本次演示",
+      "description": "validation-pixel.png等待手工确认",
+      "timestamp": "2026-11-07T09:29:09.537Z",
+      "kind": "upload"
+    },
+    {
+      "id": "ee78c05a-a16b-4867-880e-0a6306434646",
+      "title": "完成一个行动步骤",
+      "description": "向商家提交售后请求",
+      "timestamp": "2026-11-07T09:29:08.074Z",
+      "kind": "action"
+    },
+    {
+      "id": "91627951-5e7e-45b7-8954-6e874c5ce80c",
+      "title": "恢复待处理事项",
+      "description": "浏览器验收事项（已编辑）已重新计算优先级",
+      "timestamp": "2026-11-07T09:29:07.411Z",
+      "kind": "confirm"
+    },
+    {
+      "id": "3d82ba93-58e2-4b4d-afbd-33b6eeb3d3a8",
+      "title": "事项已完成",
+      "description": "浏览器验收事项（已编辑） · 已完成浏览器验收",
+      "timestamp": "2026-11-07T09:29:07.259Z",
+      "kind": "complete"
+    },
+    {
+      "id": "361f8738-2e1f-439a-9cd3-7927671d243e",
+      "title": "更新事项信息",
+      "description": "浏览器验收事项（已编辑）的评分与行动建议已重算",
+      "timestamp": "2026-11-07T09:29:06.266Z",
+      "kind": "confirm"
+    },
+    {
+      "id": "7f24a48d-0dd4-4ccd-8712-a9af734d95cb",
+      "title": "创建生活事项",
+      "description": "浏览器验收事项已进入优先级队列",
+      "timestamp": "2026-11-07T09:29:05.193Z",
+      "kind": "confirm"
+    },
+    {
+      "id": "activity-1",
+      "title": "完成退货准备",
+      "description": "已拍摄降噪耳机商品与配件照片",
+      "timestamp": "2026-11-07T08:29:04.472Z",
+      "kind": "action"
+    },
+    {
+      "id": "activity-2",
+      "title": "材料等待确认",
+      "description": "键盘订单截图的 4 个字段需要确认",
+      "timestamp": "2026-11-07T07:29:04.472Z",
+      "kind": "upload"
+    },
+    {
+      "id": "activity-3",
+      "title": "更新退租计划",
+      "description": "已生成 4 步退租交接清单",
+      "timestamp": "2026-11-07T01:29:04.472Z",
+      "kind": "action"
+    },
+    {
+      "id": "activity-4",
+      "title": "记录取消续费",
+      "description": "知音音乐已取消，记录年度少支出 ¥180",
+      "timestamp": "2026-11-06T17:29:04.472Z",
+      "kind": "complete"
+    },
+    {
+      "id": "activity-5",
+      "title": "确认电子发票",
+      "description": "平板电脑保修事项已进入期限雷达",
+      "timestamp": "2026-11-06T06:29:04.472Z",
+      "kind": "confirm"
+    }
+  ],
+  "histories": [
+    {
+      "id": "e17c720a-e10e-426c-80a3-0e0500e4e02d",
+      "matterId": "c8cbd9a6-57a1-4b13-8814-64f1b60cc424",
+      "timestamp": "2026-11-07T09:29:33.956Z",
+      "kind": "reassessed",
+      "title": "材料字段来源已关联",
+      "description": "保留 OCR 与用户录入的来源区别；确认状态已更新，评分和行动方案已同步。",
+      "score": 26,
+      "changes": []
+    },
+    {
+      "id": "51f9b4cd-8616-4c89-89ce-14b8b3f8dcff",
+      "matterId": "c8cbd9a6-57a1-4b13-8814-64f1b60cc424",
+      "timestamp": "2026-11-07T09:29:33.956Z",
+      "kind": "created",
+      "title": "创建事项并生成决策方案",
+      "description": "初始优先级 26 分，使用可维护规则计算。",
+      "score": 26,
+      "changes": []
+    },
+    {
+      "id": "15243424-982f-4243-835d-a20ac2123c1c",
+      "matterId": "matter-headphones",
+      "timestamp": "2026-11-07T09:29:08.074Z",
+      "kind": "step",
+      "title": "完成一个行动步骤",
+      "description": "向商家提交售后请求",
+      "score": 86,
+      "changes": []
+    },
+    {
+      "id": "4f859bd5-a8cf-45d5-bbd3-084673f19d6c",
+      "matterId": "77136238-e4dd-45c6-8715-7a773bef5198",
+      "timestamp": "2026-11-07T09:29:07.411Z",
+      "kind": "reopened",
+      "title": "恢复待处理并重新评估",
+      "description": "事项已重新进入优先级队列，当前 28 分。",
+      "score": 28,
+      "changes": []
+    },
+    {
+      "id": "11e19f5b-1bb9-4133-b860-6dc151e12d90",
+      "matterId": "77136238-e4dd-45c6-8715-7a773bef5198",
+      "timestamp": "2026-11-07T09:29:07.259Z",
+      "kind": "completed",
+      "title": "事项已完成",
+      "description": "已完成浏览器验收；优先级 28 → 0，行动方案保留用于追溯。",
+      "score": 0,
+      "changes": []
+    },
+    {
+      "id": "11359997-97d8-41dc-822a-0251634a3cfb",
+      "matterId": "77136238-e4dd-45c6-8715-7a773bef5198",
+      "timestamp": "2026-11-07T09:29:06.266Z",
+      "kind": "updated",
+      "title": "事项信息与决策方案已更新",
+      "description": "优先级 25 → 28；已完成步骤按稳定标识保留。",
+      "score": 28,
+      "changes": [
+        {
+          "field": "title",
+          "label": "事项名称",
+          "before": "浏览器验收事项",
+          "after": "浏览器验收事项（已编辑）"
+        },
+        {
+          "field": "importance",
+          "label": "重要程度",
+          "before": "未填写",
+          "after": "3"
+        },
+        {
+          "field": "preparationDays",
+          "label": "准备时间",
+          "before": "未填写",
+          "after": "2"
+        }
+      ]
+    },
+    {
+      "id": "90b8a884-03f8-48d6-9281-ff4edb1688f3",
+      "matterId": "77136238-e4dd-45c6-8715-7a773bef5198",
+      "timestamp": "2026-11-07T09:29:05.193Z",
+      "kind": "created",
+      "title": "创建事项并生成决策方案",
+      "description": "初始优先级 25 分，使用可维护规则计算。",
+      "score": 25,
+      "changes": []
+    },
+    {
+      "id": "811e3f83-aaee-4cf6-9c06-03d2599fc17d",
+      "matterId": "matter-cancelled",
+      "timestamp": "2026-11-07T09:29:04.474Z",
+      "kind": "loaded",
+      "title": "已生成可解释评估",
+      "description": "规则引擎已计算 0 分并生成动态行动方案。",
+      "score": 0,
+      "changes": []
+    },
+    {
+      "id": "355bc9b4-5e76-4184-bd33-3822e80680e8",
+      "matterId": "matter-refund",
+      "timestamp": "2026-11-07T09:29:04.474Z",
+      "kind": "loaded",
+      "title": "已生成可解释评估",
+      "description": "规则引擎已计算 0 分并生成动态行动方案。",
+      "score": 0,
+      "changes": []
+    },
+    {
+      "id": "74ac118c-3dad-4804-ad29-5f1db450dc8f",
+      "matterId": "matter-payment",
+      "timestamp": "2026-11-07T09:29:04.474Z",
+      "kind": "loaded",
+      "title": "已生成可解释评估",
+      "description": "规则引擎已计算 73 分并生成动态行动方案。",
+      "score": 73,
+      "changes": []
+    },
+    {
+      "id": "61dc3409-55c9-45f8-b53d-bb54027c3dfc",
+      "matterId": "matter-course",
+      "timestamp": "2026-11-07T09:29:04.474Z",
+      "kind": "loaded",
+      "title": "已生成可解释评估",
+      "description": "规则引擎已计算 59 分并生成动态行动方案。",
+      "score": 59,
+      "changes": []
+    },
+    {
+      "id": "67b1d345-b839-4257-9e93-149708c75e42",
+      "matterId": "matter-tablet",
+      "timestamp": "2026-11-07T09:29:04.474Z",
+      "kind": "loaded",
+      "title": "已生成可解释评估",
+      "description": "规则引擎已计算 39 分并生成动态行动方案。",
+      "score": 39,
+      "changes": []
+    },
+    {
+      "id": "e72b7862-4970-42ef-a763-de6f9c65711e",
+      "matterId": "matter-lease",
+      "timestamp": "2026-11-07T09:29:04.474Z",
+      "kind": "loaded",
+      "title": "已生成可解释评估",
+      "description": "规则引擎已计算 85 分并生成动态行动方案。",
+      "score": 85,
+      "changes": []
+    },
+    {
+      "id": "b6a739e1-768f-4ade-ab03-1cf18071b65d",
+      "matterId": "matter-video",
+      "timestamp": "2026-11-07T09:29:04.474Z",
+      "kind": "loaded",
+      "title": "已生成可解释评估",
+      "description": "规则引擎已计算 61 分并生成动态行动方案。",
+      "score": 61,
+      "changes": []
+    },
+    {
+      "id": "9da955c8-7fee-49bb-b1fd-933edb43d8f9",
+      "matterId": "matter-headphones",
+      "timestamp": "2026-11-07T09:29:04.474Z",
+      "kind": "loaded",
+      "title": "已生成可解释评估",
+      "description": "规则引擎已计算 86 分并生成动态行动方案。",
+      "score": 86,
+      "changes": []
+    }
+  ]
+}

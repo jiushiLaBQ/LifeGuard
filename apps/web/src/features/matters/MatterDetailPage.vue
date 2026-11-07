@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, reactive, ref, watch } from 'vue'
-import { useRoute } from 'vue-router'
-import { AlertTriangle, ArrowLeft, CalendarClock, Check, CheckCircle2, Clipboard, FileCheck2, FileText, History, Info, Pencil, RotateCcw, Scale, ShieldCheck } from 'lucide-vue-next'
+import { useRoute, useRouter } from 'vue-router'
+import { AlertTriangle, ArrowLeft, CalendarClock, Check, CheckCircle2, Clipboard, FileCheck2, FileText, History, Info, Pencil, RotateCcw, Scale, ShieldCheck, Trash2 } from 'lucide-vue-next'
 import BaseBadge from '@/components/BaseBadge.vue'
 import BaseModal from '@/components/BaseModal.vue'
 import EmptyState from '@/components/EmptyState.vue'
@@ -13,6 +13,7 @@ import { useToast } from '@/shared/ui/useToast'
 import type { FactProvenance, MatterFactKey, MatterImportance, MatterType } from '@/types'
 
 const route = useRoute()
+const router = useRouter()
 const store = useDemoStore()
 const { notify } = useToast()
 const matter = computed(() => store.getMatter(String(route.params.id)))
@@ -21,6 +22,7 @@ const histories = computed(() => matter.value ? store.getHistories(matter.value.
 const sourceMaterial = computed(() => store.materials.find((material) => material.fields.some((field) => field.key === 'title' && field.value === matter.value?.title && field.status === 'confirmed')))
 const editOpen = ref(false)
 const completeOpen = ref(false)
+const deleteOpen = ref(false)
 const editError = ref('')
 const completeError = ref('')
 const outcome = ref('已处理')
@@ -95,13 +97,21 @@ function complete() {
   completeOpen.value = false
   notify('完成记录已保存', 'success', '事项已退出优先队列，历史方案仍可追溯。')
 }
+
+async function remove() {
+  if (!matter.value) return
+  store.removeMatter(matter.value.id)
+  deleteOpen.value = false
+  notify('本地事项已删除', 'success', '统计数据已同步；关联的订阅与材料记录保留。')
+  await router.push('/radar')
+}
 </script>
 
 <template>
   <div v-if="matter">
     <RouterLink to="/radar" class="mb-5 inline-flex items-center gap-1.5 text-sm font-medium text-muted hover:text-brand"><ArrowLeft :size="16" />返回期限雷达</RouterLink>
     <header class="card p-5 sm:p-6">
-      <div class="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between"><div><div class="flex flex-wrap items-center gap-2"><BaseBadge :label="matterTypeLabels[matter.type]" tone="brand" /><BaseBadge :label="matter.status === 'completed' ? '已完成' : riskLabels[matter.risk]" :tone="matter.status === 'completed' ? 'success' : matter.risk === 'urgent' ? 'danger' : matter.risk === 'high' ? 'warning' : 'neutral'" dot /><BaseBadge v-if="matter.source === 'demo'" label="虚构演示样例" /></div><h1 class="page-title mt-4">{{ matter.title }}</h1><p class="mt-2 max-w-2xl text-sm leading-6 text-muted">{{ matter.description }}</p></div><div class="flex shrink-0 flex-wrap gap-2"><button v-if="matter.status === 'active'" class="btn-secondary" @click="editOpen = true"><Pencil :size="15" />编辑并重算</button><button v-if="matter.status === 'active'" class="btn-primary" @click="completeOpen = true"><CheckCircle2 :size="16" />标记完成</button><button v-else class="btn-secondary" @click="store.reopenMatter(matter.id); notify('事项已恢复并重新评估')"><RotateCcw :size="15" />恢复待处理</button></div></div>
+      <div class="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between"><div><div class="flex flex-wrap items-center gap-2"><BaseBadge :label="matterTypeLabels[matter.type]" tone="brand" /><BaseBadge :label="matter.status === 'completed' ? '已完成' : riskLabels[matter.risk]" :tone="matter.status === 'completed' ? 'success' : matter.risk === 'urgent' ? 'danger' : matter.risk === 'high' ? 'warning' : 'neutral'" dot /><BaseBadge v-if="matter.source === 'demo'" label="虚构演示样例" /></div><h1 class="page-title mt-4">{{ matter.title }}</h1><p class="mt-2 max-w-2xl text-sm leading-6 text-muted">{{ matter.description }}</p></div><div class="flex shrink-0 flex-wrap gap-2"><button v-if="matter.status === 'active'" class="btn-secondary" @click="editOpen = true"><Pencil :size="15" />编辑并重算</button><button v-if="matter.status === 'active'" class="btn-primary" @click="completeOpen = true"><CheckCircle2 :size="16" />标记完成</button><button v-else class="btn-secondary" @click="store.reopenMatter(matter.id); notify('事项已恢复并重新评估')"><RotateCcw :size="15" />恢复待处理</button><button class="btn-ghost text-danger hover:bg-red-50" @click="deleteOpen = true"><Trash2 :size="15" />删除事项</button></div></div>
       <div class="mt-6 grid grid-cols-2 gap-4 border-t border-line pt-5 lg:grid-cols-4"><div><p class="text-xs text-muted">截止日期</p><p class="mt-1.5 text-sm font-semibold text-ink">{{ formatDate(matter.dueDate, true) }}</p><p :class="['mt-1 text-xs', matter.status === 'active' && matter.risk === 'urgent' ? 'text-danger' : 'text-muted']">{{ matter.status === 'active' ? relativeDeadline(matter.dueDate) : `完成于 ${formatDate(matter.completedOn!, true)}` }}</p></div><div><p class="text-xs text-muted">涉及金额</p><p class="numeric mt-1.5 text-sm font-semibold text-ink">{{ formatCurrency(matter.amount, matter.currency) }}</p><p class="mt-1 text-xs text-muted">仅用于排序，不代表确定损失</p></div><div><p class="text-xs text-muted">商家 / 机构</p><p class="mt-1.5 text-sm font-semibold text-ink">{{ matter.merchant }}</p><p class="mt-1 text-xs text-muted">{{ matter.source === 'manual' ? '手工创建' : matter.source === 'material' ? '材料确认生成' : '预置演示数据' }}</p></div><div><p class="text-xs text-muted">下一步行动</p><p class="mt-1.5 text-sm font-semibold leading-5 text-ink">{{ matter.nextAction }}</p></div></div>
     </header>
 
@@ -139,6 +149,7 @@ function complete() {
       <template #footer><button class="btn-secondary" @click="editOpen = false">取消</button><button type="submit" form="edit-matter-form" class="btn-primary">保存并重新计算</button></template>
     </BaseModal>
     <BaseModal :open="completeOpen" title="记录实际处理结果" description="完成结果会进入历史记录；节省金额只记录你明确确认的数值。" @close="completeOpen = false"><form id="detail-complete-form" class="space-y-4" @submit.prevent="complete"><label class="block"><span class="label">处理结果</span><input v-model="outcome" class="input" placeholder="例如：已退款" /></label><label class="block"><span class="label">确认少支出或挽回金额（可选）</span><input v-model="savedAmount" class="input" inputmode="decimal" placeholder="0.00" /></label><p v-if="completeError" class="field-error" role="alert">{{ completeError }}</p></form><template #footer><button class="btn-secondary" @click="completeOpen = false">取消</button><button type="submit" form="detail-complete-form" class="btn-primary">保存完成记录</button></template></BaseModal>
+    <BaseModal :open="deleteOpen" title="删除这条生活事项？" description="事项及其行动方案、历史记录将移出工作区，首页与雷达统计立即同步；关联的订阅与材料记录不会被删除。此操作不可撤销。" @close="deleteOpen = false"><p class="rounded-xl bg-canvas p-4 text-sm font-semibold text-ink">{{ matter.title }}</p><template #footer><button class="btn-secondary" @click="deleteOpen = false">保留事项</button><button class="btn-danger" @click="remove"><Trash2 :size="15" />永久删除</button></template></BaseModal>
   </div>
   <div v-else class="card"><EmptyState title="没有找到这个事项" description="它可能已被清除，或链接中的记录编号无效。"><RouterLink to="/dashboard" class="btn-primary"><ArrowLeft :size="15" />返回今日概览</RouterLink></EmptyState></div>
 </template>

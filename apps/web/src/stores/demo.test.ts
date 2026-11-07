@@ -115,4 +115,21 @@ describe('事项决策状态集成场景', () => {
     expect(saved.actions.find((plan: { matterId: string }) => plan.matterId === matter.id).analysis).toContain('优先级')
     expect(saved.histories.some((history: { matterId: string }) => history.matterId === matter.id)).toBe(true)
   })
+
+  it('33 删除事项后统计、行动方案与历史同步清理', () => {
+    const store = useDemoStore()
+    store.clearDemo()
+    const matter = store.addManualMatter(input({ dueDate: future(2) }))
+    expect(store.activeMatters).toHaveLength(1)
+    expect(store.weekDue).toHaveLength(1)
+
+    store.removeMatter(matter.id)
+
+    expect(store.getMatter(matter.id)).toBeUndefined()
+    expect(store.getPlan(matter.id)).toBeUndefined()
+    expect(store.getHistories(matter.id)).toHaveLength(0)
+    expect(store.activeMatters).toHaveLength(0)
+    expect(store.weekDue).toHaveLength(0)
+    expect(store.activities[0].title).toBe('删除生活事项')
+  })
 })

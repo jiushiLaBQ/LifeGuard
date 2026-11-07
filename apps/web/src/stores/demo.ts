@@ -4,7 +4,7 @@ import { createDemoState } from '@/features/demo/seed'
 import { buildActionPlan } from '@/features/decision/actionEngine'
 import { assessMatter } from '@/features/decision/riskEngine'
 import { FACT_LABELS } from '@/features/decision/rules'
-import { calculateMonthlySpending } from '@/features/subscriptions/subscriptionEngine'
+import { calculateMonthlySpending, projectRenewals } from '@/features/subscriptions/subscriptionEngine'
 import { daysUntil, isValidDateString, matterTypeLabels, toDateInput } from '@/shared/ui/format'
 import type { ActionPlan, BillingCycle, DocumentType, ExtractedField, MaterialItem, Matter, MatterChange, MatterFactKey, MatterHistory, MatterType, Profile, RecognitionResult, Subscription, SubscriptionInput } from '@/types'
 
@@ -92,6 +92,10 @@ export const useDemoStore = defineStore('demo', () => {
   const riskMatters = computed(() => activeMatters.value.filter((matter) => matter.risk === 'urgent' || matter.risk === 'high'))
   const completedMatters = computed(() => matters.value.filter((matter) => matter.status === 'completed').sort((a, b) => (b.completedOn ?? '').localeCompare(a.completedOn ?? '')))
   const monthlySpending = computed(() => calculateMonthlySpending(subscriptions.value, profile.value.currency as Subscription['currency']))
+  const upcomingRenewals = computed(() => {
+    const today = toDateInput(new Date())
+    return projectRenewals(subscriptions.value, today, 30).filter((event) => !matters.value.some((item) => item.status === 'active' && (item.subscriptionId ? item.subscriptionId === event.subscriptionId : item.type === 'subscription' && item.title === event.service && item.dueDate === event.date)))
+  })
   const totalSaved = computed(() => completedMatters.value.reduce((total, item) => total + (item.savedAmount ?? 0), 0))
   const pendingMaterials = computed(() => materials.value.filter((material) => material.status === 'awaiting_confirmation' || material.status === 'error'))
 
@@ -273,10 +277,11 @@ export const useDemoStore = defineStore('demo', () => {
     syncDecision(matter)
     recordHistory(matter, 'reassessed', '材料字段来源已关联', '保留 OCR 与用户录入的来源区别；确认状态已更新，评分和行动方案已同步。')
     if (type === 'subscription') {
-      addSubscription({
+      const subscription = addSubscription({
         service: value('title'), category: subscriptionCategory.trim(), amount: amount!, currency: currency as Subscription['currency'],
         cycle: billingCycle, nextRenewal: value('renewal_date'), autoRenew: true, notes: value('description'),
       }, 'material', id)
+      matter.subscriptionId = subscription.id
       material.message = '已由你确认并生成订阅记录与续费事项。'
     }
     addActivity('确认识别字段', `${material.name}已生成“${matter.title}”`, 'confirm')
@@ -335,6 +340,15 @@ export const useDemoStore = defineStore('demo', () => {
     material.recognitionStage = '手工录入'
     material.extractionNote = undefined
     material.message = '识别结果已清除，可手工录入或重新识别。'
+  }
+
+  function removeMatter(id: string) {
+    const matter = getMatter(id)
+    if (!matter) return
+    matters.value = matters.value.filter((item) => item.id !== id)
+    actions.value = actions.value.filter((plan) => plan.matterId !== id)
+    histories.value = histories.value.filter((history) => history.matterId !== id)
+    addActivity('删除生活事项', `${matter.title}及其行动方案已移出工作区，订阅与材料记录不受影响。`, 'settings')
   }
 
   function removeMaterial(id: string) {
@@ -432,5 +446,5 @@ export const useDemoStore = defineStore('demo', () => {
     histories.value = []
   }
 
-  return { matters, actions, materials, subscriptions, activities, histories, profile, activeMatters, weekDue, riskMatters, completedMatters, monthlySpending, totalSaved, pendingMaterials, getMatter, getPlan, getHistories, confirmFact, toggleStep, completeMatter, reopenMatter, updateMatter, addManualMatter, addMaterial, confirmMaterial, beginRecognition, updateRecognitionProgress, finishRecognition, failRecognition, clearRecognition, removeMaterial, getSubscription, addSubscription, updateSubscription, pauseSubscription, resumeSubscription, removeSubscription, setDuplicateState, saveProfile, resetDemo, clearDemo }
+  return { matters, actions, materials, subscriptions, activities, histories, profile, activeMatters, weekDue, riskMatters, completedMatters, monthlySpending, upcomingRenewals, totalSaved, pendingMaterials, getMatter, getPlan, getHistories, confirmFact, toggleStep, completeMatter, reopenMatter, updateMatter, removeMatter, addManualMatter, addMaterial, confirmMaterial, beginRecognition, updateRecognitionProgress, finishRecognition, failRecognition, clearRecognition, removeMaterial, getSubscription, addSubscription, updateSubscription, pauseSubscription, resumeSubscription, removeSubscription, setDuplicateState, saveProfile, resetDemo, clearDemo }
 })

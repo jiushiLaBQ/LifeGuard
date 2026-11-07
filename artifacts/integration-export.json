@@ -1,0 +1,217 @@
+{
+  "exportedAt": "2026-11-07T09:28:44.792Z",
+  "mode": "lifeguard-local-demo",
+  "profile": {
+    "name": "林晓",
+    "email": "demo@lifeguard.local",
+    "timezone": "Asia/Shanghai",
+    "currency": "CNY",
+    "weeklySummary": false
+  },
+  "matters": [],
+  "actions": [],
+  "materials": [
+    {
+      "id": "a6796880-2a2b-4340-b17a-c8d41ab1df62",
+      "name": "validation-pixel.png",
+      "size": 68,
+      "mimeType": "image/png",
+      "hash": "431ced6916a2a21a156e38701afe55bbd7f88969fbbfc56d7fe099d47f265460",
+      "status": "ready",
+      "source": "local",
+      "uploadedAt": "2026-11-07T09:28:05.357Z",
+      "recognitionProgress": 100,
+      "recognitionStage": "已确认",
+      "message": "已由你确认并生成生活事项。",
+      "fields": [
+        {
+          "key": "title",
+          "label": "事项名称",
+          "value": "集成验收订单",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "已由你修改，确认后以填写值为准"
+        },
+        {
+          "key": "merchant",
+          "label": "商家 / 机构",
+          "value": "虚构商家",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "已由你修改，确认后以填写值为准"
+        },
+        {
+          "key": "amount",
+          "label": "金额",
+          "value": "120",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "已由你修改，确认后以填写值为准"
+        },
+        {
+          "key": "billing_cycle",
+          "label": "续费周期",
+          "value": "",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "purchase_date",
+          "label": "购买 / 下单日期",
+          "value": "",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "effective_date",
+          "label": "生效日期",
+          "value": "",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "expiry_date",
+          "label": "到期 / 退货截止日期",
+          "value": "2026-11-12",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "已由你修改，确认后以填写值为准"
+        },
+        {
+          "key": "renewal_date",
+          "label": "下次续费日期",
+          "value": "",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "description",
+          "label": "描述 / 备注",
+          "value": "",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        }
+      ],
+      "recognition": {
+        "document_type": "其他",
+        "title": "集成验收订单",
+        "amount": "120",
+        "currency": "CNY",
+        "billing_cycle": null,
+        "purchase_date": null,
+        "effective_date": null,
+        "expiry_date": "2026-11-12",
+        "renewal_date": null,
+        "merchant": "虚构商家",
+        "description": "",
+        "confidence": {},
+        "need_confirmation": []
+      },
+      "recognitionEngine": "browser-ocr",
+      "extractionNote": "图片已在浏览器内完成中英文 OCR"
+    }
+  ],
+  "subscriptions": [
+    {
+      "service": "集成验收会员",
+      "category": "影音娱乐",
+      "amount": 40,
+      "currency": "CNY",
+      "cycle": "monthly",
+      "nextRenewal": "2026-11-19",
+      "autoRenew": true,
+      "notes": "",
+      "id": "b647298c-a0e5-4ce0-9235-c6a5f0b18469",
+      "status": "active",
+      "source": "manual",
+      "createdAt": "2026-11-07T09:28:34.060Z",
+      "updatedAt": "2026-11-07T09:28:37.359Z",
+      "duplicateState": "none"
+    }
+  ],
+  "activities": [
+    {
+      "id": "77997c31-ec8d-449c-a5fc-2f31f014c858",
+      "title": "删除生活事项",
+      "description": "集成验收订单及其行动方案已移出工作区，订阅与材料记录不受影响。",
+      "timestamp": "2026-11-07T09:28:42.292Z",
+      "kind": "settings"
+    },
+    {
+      "id": "66977f8d-f66a-4394-8899-28b2d1bc63e5",
+      "title": "更新事项信息",
+      "description": "集成验收订单的评分与行动建议已重算",
+      "timestamp": "2026-11-07T09:28:40.161Z",
+      "kind": "confirm"
+    },
+    {
+      "id": "e901dccd-a648-4a1f-8450-94cf9b8c8eaf",
+      "title": "恢复订阅跟踪",
+      "description": "集成验收会员已恢复，预测仍取决于自动续费开关",
+      "timestamp": "2026-11-07T09:28:37.359Z",
+      "kind": "confirm"
+    },
+    {
+      "id": "3dbb17e8-c285-4a18-b3d0-0f94270af557",
+      "title": "暂停订阅跟踪",
+      "description": "集成验收会员不再计入未来支出，历史记录仍保留",
+      "timestamp": "2026-11-07T09:28:35.425Z",
+      "kind": "settings"
+    },
+    {
+      "id": "830e6ca4-6250-49b9-a455-ed59e7c55a77",
+      "title": "新增订阅记录",
+      "description": "集成验收会员 · 2026-11-19 下次续费",
+      "timestamp": "2026-11-07T09:28:34.060Z",
+      "kind": "confirm"
+    },
+    {
+      "id": "d95cbcbd-3d4d-4003-b704-7e1d40e6500e",
+      "title": "恢复待处理事项",
+      "description": "集成验收订单已重新计算优先级",
+      "timestamp": "2026-11-07T09:28:33.308Z",
+      "kind": "confirm"
+    },
+    {
+      "id": "1b0c4f5a-d5d2-4084-a096-29fd4d32e218",
+      "title": "事项已完成",
+      "description": "集成验收订单 · 集成链路验收完成",
+      "timestamp": "2026-11-07T09:28:32.043Z",
+      "kind": "complete"
+    },
+    {
+      "id": "783b0b7e-7075-454b-9d80-0f1a25989484",
+      "title": "完成一个行动步骤",
+      "description": "核实关键信息与适用规则",
+      "timestamp": "2026-11-07T09:28:31.909Z",
+      "kind": "action"
+    },
+    {
+      "id": "e6c1aef3-712f-4e5d-97a9-e475cdfbd097",
+      "title": "确认识别字段",
+      "description": "validation-pixel.png已生成“集成验收订单”",
+      "timestamp": "2026-11-07T09:28:29.879Z",
+      "kind": "confirm"
+    },
+    {
+      "id": "66c21a07-6a61-4f7f-a279-0d06e5e4a02a",
+      "title": "创建生活事项",
+      "description": "集成验收订单已进入优先级队列",
+      "timestamp": "2026-11-07T09:28:29.879Z",
+      "kind": "confirm"
+    },
+    {
+      "id": "1a509583-804b-4344-8fd4-4604b023d592",
+      "title": "材料已保存在本次演示",
+      "description": "validation-pixel.png等待手工确认",
+      "timestamp": "2026-11-07T09:28:05.357Z",
+      "kind": "upload"
+    }
+  ],
+  "histories": []
+}
