@@ -24,7 +24,7 @@ export function createDemoState(): DemoState {
       },
       {
         id: 'matter-video', title: '云享视频会员续费', merchant: '云享视频', type: 'subscription', status: 'active', risk: 'high',
-        amount: 25, exposure: 25, currency: 'CNY', dueDate: dateFromNow(2),
+        amount: 25, exposure: 25, currency: 'CNY', dueDate: dateFromNow(2), subscriptionId: 'sub-video',
         description: '月度自动续费将在两天后扣款，当前不常使用。', nextAction: '确认是否保留，不需要则取消自动续费', source: 'demo',
       },
       {

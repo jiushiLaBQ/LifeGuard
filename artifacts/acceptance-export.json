@@ -1,0 +1,924 @@
+{
+  "exportedAt": "2026-11-07T10:07:35.186Z",
+  "mode": "lifeguard-local-demo",
+  "profile": {
+    "name": "林晓",
+    "email": "demo@lifeguard.local",
+    "timezone": "Asia/Shanghai",
+    "currency": "CNY",
+    "weeklySummary": false
+  },
+  "matters": [
+    {
+      "title": "噪声材料手工补录",
+      "merchant": "虚构办理机构",
+      "amount": 150,
+      "dueDate": "2026-11-13",
+      "type": "purchase",
+      "nextAction": "查看行动清单并处理下一步",
+      "id": "56980427-3408-4d3f-98ff-82e49646c647",
+      "currency": "CNY",
+      "status": "active",
+      "risk": "medium",
+      "description": "由你核对材料字段并确认生成的生活事项。",
+      "source": "material",
+      "provenance": {
+        "dueDate": {
+          "source": "user",
+          "confirmed": true,
+          "note": "期限字段已由你核对确认。"
+        },
+        "amount": {
+          "source": "user",
+          "confirmed": true,
+          "note": "材料字段已由你核对确认。"
+        }
+      },
+      "assessment": {
+        "score": 59,
+        "level": "medium",
+        "factors": [
+          {
+            "key": "time",
+            "label": "时间紧迫程度",
+            "weight": 40,
+            "score": 80,
+            "points": 32,
+            "source": "user",
+            "explanation": "退货或售后截止日还有 6 天，按该事项期限曲线计 80 分；用户提供且已核对。"
+          },
+          {
+            "key": "loss",
+            "label": "潜在经济损失",
+            "weight": 25,
+            "score": 30,
+            "points": 8,
+            "source": "user",
+            "explanation": "按商品金额或预计损失 150 CNY 与分类型金额尺度计分；这是排序依据，不是实际损失或赔付承诺。"
+          },
+          {
+            "key": "importance",
+            "label": "事项重要程度",
+            "weight": 15,
+            "score": 60,
+            "points": 9,
+            "source": "inference",
+            "explanation": "重要程度为 3/5，映射为 60 分；该值由事项类型规则暂估。"
+          },
+          {
+            "key": "preparation",
+            "label": "处理准备时间",
+            "weight": 10,
+            "score": 29,
+            "points": 3,
+            "source": "inference",
+            "explanation": "预计准备 2 天，还有 6 天；准备时间越接近或超过剩余时间，得分越高。"
+          },
+          {
+            "key": "completeness",
+            "label": "信息完整程度",
+            "weight": 10,
+            "score": 65,
+            "points": 7,
+            "source": "inference",
+            "explanation": "综合期限、金额、重要性、准备时间的来源与确认状态；用户核对的信息得分最高，推断和未核实信息会降低本项得分。"
+          }
+        ],
+        "missingInformation": [
+          "重要程度未填写，暂按3/5计算，请确认",
+          "准备时间未填写，暂按2 天计算，请确认"
+        ],
+        "ruleVersion": "lifeguard-rules-1.0",
+        "summary": "当前优先级主要由时间紧迫程度、事项重要程度贡献。仍有 2 项信息需要补充或核实。"
+      }
+    },
+    {
+      "title": "无线降噪耳机（已核对）",
+      "merchant": "声浪数码旗舰店",
+      "amount": 899,
+      "dueDate": "2026-12-17",
+      "type": "purchase",
+      "nextAction": "查看行动清单并处理下一步",
+      "id": "dcb0e742-4b19-4268-a476-4a2a92af2044",
+      "currency": "CNY",
+      "status": "active",
+      "risk": "medium",
+      "description": "由你核对材料字段并确认生成的生活事项。",
+      "source": "material",
+      "provenance": {
+        "dueDate": {
+          "source": "user",
+          "confirmed": true,
+          "note": "由你在编辑事项时提供并确认。"
+        },
+        "amount": {
+          "source": "user",
+          "confirmed": true,
+          "note": "材料字段已由你核对确认。"
+        },
+        "importance": {
+          "source": "user",
+          "confirmed": true,
+          "note": "由你在编辑事项时提供并确认。"
+        },
+        "preparationDays": {
+          "source": "user",
+          "confirmed": true,
+          "note": "由你在编辑事项时提供并确认。"
+        }
+      },
+      "assessment": {
+        "score": 42,
+        "level": "medium",
+        "factors": [
+          {
+            "key": "time",
+            "label": "时间紧迫程度",
+            "weight": 40,
+            "score": 10,
+            "points": 4,
+            "source": "user",
+            "explanation": "退货或售后截止日还有 40 天，按该事项期限曲线计 10 分；用户提供且已核对。"
+          },
+          {
+            "key": "loss",
+            "label": "潜在经济损失",
+            "weight": 25,
+            "score": 72,
+            "points": 18,
+            "source": "user",
+            "explanation": "按商品金额或预计损失 899 CNY 与分类型金额尺度计分；这是排序依据，不是实际损失或赔付承诺。"
+          },
+          {
+            "key": "importance",
+            "label": "事项重要程度",
+            "weight": 15,
+            "score": 60,
+            "points": 9,
+            "source": "user",
+            "explanation": "重要程度为 3/5，映射为 60 分；用户提供且已核对。"
+          },
+          {
+            "key": "preparation",
+            "label": "处理准备时间",
+            "weight": 10,
+            "score": 5,
+            "points": 1,
+            "source": "user",
+            "explanation": "预计准备 2 天，还有 40 天；准备时间越接近或超过剩余时间，得分越高。"
+          },
+          {
+            "key": "completeness",
+            "label": "信息完整程度",
+            "weight": 10,
+            "score": 100,
+            "points": 10,
+            "source": "user",
+            "explanation": "综合期限、金额、重要性、准备时间的来源与确认状态；用户核对的信息得分最高，推断和未核实信息会降低本项得分。"
+          }
+        ],
+        "missingInformation": [],
+        "ruleVersion": "lifeguard-rules-1.0",
+        "summary": "当前优先级主要由潜在经济损失、信息完整程度贡献。关键信息均已核对。"
+      },
+      "importance": 3,
+      "preparationDays": 2
+    }
+  ],
+  "actions": [
+    {
+      "id": "187042cb-5caf-4fba-b0f9-bcf61751a78c",
+      "matterId": "56980427-3408-4d3f-98ff-82e49646c647",
+      "title": "噪声材料手工补录决策方案",
+      "summary": "优先级 59/100，先核实信息，再按“查看行动清单并处理下一步”推进并保存结果。",
+      "generationMode": "rule",
+      "updatedAt": "2026-11-07T10:07:34.600Z",
+      "analysis": "退货售后“噪声材料手工补录”当前优先级为 59/100。当前优先级主要由时间紧迫程度、事项重要程度贡献。仍有 2 项信息需要补充或核实。 建议完成时间只依据已核实的期限生成，规则版本为 lifeguard-rules-1.0。",
+      "risks": [
+        "期限安排：按当前记录还有 6 天，仍需为材料补正和沟通等待留出时间。",
+        "金额提示：当前记录 ¥150 仅用于优先级排序，不代表确定损失、退款或赔付结果。",
+        "信息可靠性：重要程度未填写，暂按3/5计算，请确认；准备时间未填写，暂按2 天计算，请确认。"
+      ],
+      "recommendedAction": "查看行动清单并处理下一步",
+      "suggestedCompletionDate": "2026-11-12",
+      "recommendationReason": "按已核实的截止日期预留 1 天处理与补正时间；这只是安排建议，不改变原期限。",
+      "ruleVersion": "lifeguard-rules-1.0",
+      "steps": [
+        {
+          "id": "d455adfe-9a9c-4c71-b7db-fac2f4c0048d",
+          "key": "verify-facts",
+          "title": "核实关键信息与适用规则",
+          "detail": "先处理这些信息缺口：重要程度未填写，暂按3/5计算，请确认；准备时间未填写，暂按2 天计算，请确认。核实前不要把候选值当作确定事实。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "47e3f25c-23ee-4b81-8c5b-c02eedbe6e7d",
+          "key": "prepare-evidence",
+          "title": "整理订单与商品证据",
+          "detail": "准备订单、支付记录、商品现状和已有沟通内容，不覆盖原始文件。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "9c68860d-1336-48e2-84f6-c5cd1c2ca647",
+          "key": "submit-request",
+          "title": "向商家提交售后请求",
+          "detail": "通过订单或商家正式入口说明诉求，先核实适用规则、寄回要求和受理编号。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "017422f5-8133-4a78-b9e7-ec2a4df390ea",
+          "key": "save-result",
+          "title": "保存处理结果并更新记录",
+          "detail": "记录实际结果、日期和相关凭证；只有你明确确认的金额才计入少支出统计。",
+          "required": true,
+          "done": false
+        }
+      ],
+      "materials": [
+        "订单与支付凭证",
+        "商品及配件照片",
+        "商家规则与沟通记录",
+        "售后受理或物流凭证"
+      ],
+      "script": "你好，我需要处理“噪声材料手工补录”相关事项。请依据订单内容和贵方现行售后规则，协助确认可申请的处理方式、所需材料、办理期限及结果凭证。我的诉求以双方后续确认记录为准，谢谢。"
+    },
+    {
+      "id": "ffdd1ae0-4782-4a9a-8291-e396b13657ad",
+      "matterId": "dcb0e742-4b19-4268-a476-4a2a92af2044",
+      "title": "无线降噪耳机（已核对）决策方案",
+      "summary": "优先级 42/100，先核实信息，再按“查看行动清单并处理下一步”推进并保存结果。",
+      "generationMode": "rule",
+      "updatedAt": "2026-11-07T10:07:34.601Z",
+      "analysis": "退货售后“无线降噪耳机（已核对）”当前优先级为 42/100。当前优先级主要由潜在经济损失、信息完整程度贡献。关键信息均已核对。 建议完成时间只依据已核实的期限生成，规则版本为 lifeguard-rules-1.0。",
+      "risks": [
+        "期限安排：按当前记录还有 40 天，仍需为材料补正和沟通等待留出时间。",
+        "金额提示：当前记录 ¥899 仅用于优先级排序，不代表确定损失、退款或赔付结果。"
+      ],
+      "recommendedAction": "查看行动清单并处理下一步",
+      "suggestedCompletionDate": "2026-12-16",
+      "recommendationReason": "按已核实的截止日期预留 1 天处理与补正时间；这只是安排建议，不改变原期限。",
+      "ruleVersion": "lifeguard-rules-1.0",
+      "steps": [
+        {
+          "id": "42db9236-f5ba-40c6-8f54-52bff1080e8f",
+          "key": "verify-facts",
+          "title": "复核关键信息与适用规则",
+          "detail": "关键信息已经核对，仍需保存原始材料和后续处理凭证。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "462257a3-d9f5-4e5e-ac81-92aa87161d78",
+          "key": "prepare-evidence",
+          "title": "整理订单与商品证据",
+          "detail": "准备订单、支付记录、商品现状和已有沟通内容，不覆盖原始文件。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "236cb877-236d-4b64-bdc1-1e5c4627387e",
+          "key": "submit-request",
+          "title": "向商家提交售后请求",
+          "detail": "通过订单或商家正式入口说明诉求，先核实适用规则、寄回要求和受理编号。",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": "a4a25133-61f0-454e-bf81-07a431a2d8f5",
+          "key": "save-result",
+          "title": "保存处理结果并更新记录",
+          "detail": "记录实际结果、日期和相关凭证；只有你明确确认的金额才计入少支出统计。",
+          "required": true,
+          "done": false
+        }
+      ],
+      "materials": [
+        "订单与支付凭证",
+        "商品及配件照片",
+        "商家规则与沟通记录",
+        "售后受理或物流凭证"
+      ],
+      "script": "你好，我需要处理“无线降噪耳机（已核对）”相关事项。请依据订单内容和贵方现行售后规则，协助确认可申请的处理方式、所需材料、办理期限及结果凭证。我的诉求以双方后续确认记录为准，谢谢。"
+    }
+  ],
+  "materials": [
+    {
+      "id": "5881e400-cd6c-4ec5-9f70-99bf9ac5113a",
+      "name": "acceptance-noise.png",
+      "size": 2426943,
+      "mimeType": "image/png",
+      "hash": "61529b89ae1a372b19783505781a5b47fb9f0139be2a213b1b54f0e8f4c7d909",
+      "status": "ready",
+      "source": "local",
+      "uploadedAt": "2026-11-07T10:06:23.287Z",
+      "recognitionProgress": 100,
+      "recognitionStage": "已确认",
+      "message": "已由你确认并生成生活事项。",
+      "fields": [
+        {
+          "key": "title",
+          "label": "事项名称",
+          "value": "噪声材料手工补录",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "已由你修改，确认后以填写值为准"
+        },
+        {
+          "key": "merchant",
+          "label": "商家 / 机构",
+          "value": "虚构办理机构",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "已由你修改，确认后以填写值为准"
+        },
+        {
+          "key": "amount",
+          "label": "金额",
+          "value": "150",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "已由你修改，确认后以填写值为准"
+        },
+        {
+          "key": "billing_cycle",
+          "label": "续费周期",
+          "value": "",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "purchase_date",
+          "label": "购买 / 下单日期",
+          "value": "",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "effective_date",
+          "label": "生效日期",
+          "value": "",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "expiry_date",
+          "label": "到期 / 退货截止日期",
+          "value": "2026-11-13",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "已由你修改，确认后以填写值为准"
+        },
+        {
+          "key": "renewal_date",
+          "label": "下次续费日期",
+          "value": "",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "description",
+          "label": "描述 / 备注",
+          "value": "",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        }
+      ],
+      "recognition": {
+        "document_type": "其他",
+        "title": "噪声材料手工补录",
+        "amount": "150",
+        "currency": "CNY",
+        "billing_cycle": null,
+        "purchase_date": null,
+        "effective_date": null,
+        "expiry_date": "2026-11-13",
+        "renewal_date": null,
+        "merchant": "虚构办理机构",
+        "description": "",
+        "confidence": {},
+        "need_confirmation": []
+      },
+      "recognitionEngine": "manual"
+    },
+    {
+      "id": "6eb3fc35-08dc-4081-b2c3-ec1f7bb23ce1",
+      "name": "acceptance-blank.pdf",
+      "size": 1308,
+      "mimeType": "application/pdf",
+      "hash": "533249144d36d6ae606169ce721a4b1b30b4d02a9f9723eba11c26368da1ce69",
+      "status": "awaiting_confirmation",
+      "source": "local",
+      "uploadedAt": "2026-11-07T10:06:17.657Z",
+      "recognitionProgress": 100,
+      "recognitionStage": "等待你确认",
+      "message": "这份文件没有提取到可用字段（可能为空白、模糊或与业务无关）。请手工录入，或重选文件后重新识别。",
+      "fields": [
+        {
+          "key": "title",
+          "label": "事项名称",
+          "value": "",
+          "confidence": null,
+          "status": "pending",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "merchant",
+          "label": "商家 / 机构",
+          "value": "",
+          "confidence": null,
+          "status": "pending",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "amount",
+          "label": "金额",
+          "value": "",
+          "confidence": null,
+          "status": "pending",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "billing_cycle",
+          "label": "续费周期",
+          "value": "",
+          "confidence": null,
+          "status": "pending",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "purchase_date",
+          "label": "购买 / 下单日期",
+          "value": "",
+          "confidence": null,
+          "status": "pending",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "effective_date",
+          "label": "生效日期",
+          "value": "",
+          "confidence": null,
+          "status": "pending",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "expiry_date",
+          "label": "到期 / 退货截止日期",
+          "value": "",
+          "confidence": null,
+          "status": "pending",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "renewal_date",
+          "label": "下次续费日期",
+          "value": "",
+          "confidence": null,
+          "status": "pending",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "description",
+          "label": "描述 / 备注",
+          "value": "",
+          "confidence": null,
+          "status": "pending",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        }
+      ],
+      "recognition": {
+        "document_type": "其他",
+        "title": "",
+        "amount": null,
+        "currency": null,
+        "billing_cycle": null,
+        "purchase_date": null,
+        "effective_date": null,
+        "expiry_date": null,
+        "renewal_date": null,
+        "merchant": "",
+        "description": "",
+        "confidence": {},
+        "need_confirmation": [
+          "document_type",
+          "title"
+        ]
+      },
+      "recognitionEngine": "pdf-ocr",
+      "extractionNote": "扫描页已在浏览器内完成 OCR"
+    },
+    {
+      "id": "39e54ccd-9d50-407b-b086-99daa5efeb19",
+      "name": "acceptance-order-blur.png",
+      "size": 134400,
+      "mimeType": "image/png",
+      "hash": "94ba607026d743bf54d3c55a7be563f6189ed68369b9be4dc6c438fb6d1f12e5",
+      "status": "awaiting_confirmation",
+      "source": "local",
+      "uploadedAt": "2026-11-07T10:06:14.792Z",
+      "recognitionProgress": 100,
+      "recognitionStage": "等待你确认",
+      "message": "这份文件没有提取到可用字段（可能为空白、模糊或与业务无关）。请手工录入，或重选文件后重新识别。",
+      "fields": [
+        {
+          "key": "title",
+          "label": "事项名称",
+          "value": "",
+          "confidence": null,
+          "status": "pending",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "merchant",
+          "label": "商家 / 机构",
+          "value": "",
+          "confidence": null,
+          "status": "pending",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "amount",
+          "label": "金额",
+          "value": "",
+          "confidence": null,
+          "status": "pending",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "billing_cycle",
+          "label": "续费周期",
+          "value": "",
+          "confidence": null,
+          "status": "pending",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "purchase_date",
+          "label": "购买 / 下单日期",
+          "value": "",
+          "confidence": null,
+          "status": "pending",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "effective_date",
+          "label": "生效日期",
+          "value": "",
+          "confidence": null,
+          "status": "pending",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "expiry_date",
+          "label": "到期 / 退货截止日期",
+          "value": "",
+          "confidence": null,
+          "status": "pending",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "renewal_date",
+          "label": "下次续费日期",
+          "value": "",
+          "confidence": null,
+          "status": "pending",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "description",
+          "label": "描述 / 备注",
+          "value": "",
+          "confidence": null,
+          "status": "pending",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        }
+      ],
+      "recognition": {
+        "document_type": "其他",
+        "title": "",
+        "amount": null,
+        "currency": null,
+        "billing_cycle": null,
+        "purchase_date": null,
+        "effective_date": null,
+        "expiry_date": null,
+        "renewal_date": null,
+        "merchant": "",
+        "description": "",
+        "confidence": {},
+        "need_confirmation": [
+          "document_type",
+          "title"
+        ]
+      },
+      "recognitionEngine": "browser-ocr",
+      "extractionNote": "图片已在浏览器内完成中英文 OCR"
+    },
+    {
+      "id": "99d47dc0-92ca-4833-9261-e7307d239914",
+      "name": "acceptance-order-clear.png",
+      "size": 76565,
+      "mimeType": "image/png",
+      "hash": "a82fce4dac630018342ca59fe09e687a15bac246b4e0faf442f18cfa96a815d6",
+      "status": "ready",
+      "source": "local",
+      "uploadedAt": "2026-11-07T10:05:47.221Z",
+      "recognitionProgress": 100,
+      "recognitionStage": "已确认",
+      "message": "已由你确认并生成生活事项。",
+      "fields": [
+        {
+          "key": "title",
+          "label": "事项名称",
+          "value": "无线降噪耳机（已核对）",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "已由你修改，确认后以填写值为准"
+        },
+        {
+          "key": "merchant",
+          "label": "商家 / 机构",
+          "value": "声浪数码旗舰店",
+          "confidence": 74,
+          "status": "confirmed",
+          "evidence": "来自材料中的对应字段或明确日期标签"
+        },
+        {
+          "key": "amount",
+          "label": "金额",
+          "value": "899.00",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "已由你修改，确认后以填写值为准"
+        },
+        {
+          "key": "billing_cycle",
+          "label": "续费周期",
+          "value": "",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "purchase_date",
+          "label": "购买 / 下单日期",
+          "value": "2026-10-29",
+          "confidence": 85,
+          "status": "confirmed",
+          "evidence": "来自材料中的对应字段或明确日期标签"
+        },
+        {
+          "key": "effective_date",
+          "label": "生效日期",
+          "value": "",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "expiry_date",
+          "label": "到期 / 退货截止日期",
+          "value": "2026-11-10",
+          "confidence": 85,
+          "status": "confirmed",
+          "evidence": "来自材料中的对应字段或明确日期标签"
+        },
+        {
+          "key": "renewal_date",
+          "label": "下次续费日期",
+          "value": "",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        },
+        {
+          "key": "description",
+          "label": "描述 / 备注",
+          "value": "",
+          "confidence": null,
+          "status": "confirmed",
+          "evidence": "未找到明确依据，请保持为空或手工补充"
+        }
+      ],
+      "recognition": {
+        "document_type": "订单",
+        "title": "无线降噪耳机（已核对）",
+        "amount": "899.00",
+        "currency": "CNY",
+        "billing_cycle": null,
+        "purchase_date": "2026-10-29",
+        "effective_date": null,
+        "expiry_date": "2026-11-10",
+        "renewal_date": null,
+        "merchant": "声浪数码旗舰店",
+        "description": "",
+        "confidence": {
+          "document_type": 79,
+          "merchant": 74,
+          "purchase_date": 85,
+          "expiry_date": 85
+        },
+        "need_confirmation": []
+      },
+      "recognitionEngine": "browser-ocr",
+      "extractionNote": "图片已在浏览器内完成中英文 OCR"
+    }
+  ],
+  "subscriptions": [
+    {
+      "service": "验收视频会员",
+      "category": "影音娱乐",
+      "amount": 480,
+      "currency": "CNY",
+      "cycle": "yearly",
+      "nextRenewal": "2026-11-11",
+      "autoRenew": true,
+      "notes": "",
+      "id": "8888c6c7-179d-4d29-b7c0-c2c92eeb55fd",
+      "status": "active",
+      "source": "manual",
+      "createdAt": "2026-11-07T10:07:28.118Z",
+      "updatedAt": "2026-11-07T10:07:29.518Z",
+      "duplicateState": "none"
+    }
+  ],
+  "activities": [
+    {
+      "id": "dcc10d92-042e-45c4-8fe6-5866ab57316e",
+      "title": "更新订阅记录",
+      "description": "验收视频会员的金额、周期或续费信息已重新计算",
+      "timestamp": "2026-11-07T10:07:29.518Z",
+      "kind": "confirm"
+    },
+    {
+      "id": "e3af073a-60bd-49d4-b7f9-4f885386073d",
+      "title": "新增订阅记录",
+      "description": "验收视频会员 · 2026-11-11 下次续费",
+      "timestamp": "2026-11-07T10:07:28.118Z",
+      "kind": "confirm"
+    },
+    {
+      "id": "935af33b-92c2-42ce-aa40-be63f76456ea",
+      "title": "更新事项信息",
+      "description": "无线降噪耳机（已核对）的评分与行动建议已重算",
+      "timestamp": "2026-11-07T10:07:26.035Z",
+      "kind": "confirm"
+    },
+    {
+      "id": "fb9f2d96-d1d0-4bf2-8de1-06a84fc78a03",
+      "title": "删除生活事项",
+      "description": "手工验收事项及其行动方案已移出工作区，订阅与材料记录不受影响。",
+      "timestamp": "2026-11-07T10:07:23.500Z",
+      "kind": "settings"
+    },
+    {
+      "id": "91a8ec2b-a9ab-44e4-bde5-5e6fe9a617c3",
+      "title": "创建生活事项",
+      "description": "手工验收事项已进入优先级队列",
+      "timestamp": "2026-11-07T10:07:21.918Z",
+      "kind": "confirm"
+    },
+    {
+      "id": "eed30216-79bb-4498-b525-c24d0c9824cb",
+      "title": "材料已保存在本次演示",
+      "description": "acceptance-corrupt.pdf等待手工确认",
+      "timestamp": "2026-11-07T10:07:20.648Z",
+      "kind": "upload"
+    },
+    {
+      "id": "a79af1a6-dc02-4240-ae6d-eea88d76c111",
+      "title": "确认识别字段",
+      "description": "acceptance-noise.png已生成“噪声材料手工补录”",
+      "timestamp": "2026-11-07T10:07:19.903Z",
+      "kind": "confirm"
+    },
+    {
+      "id": "bd93fb24-d96a-4e03-97ca-0a320b5d960b",
+      "title": "创建生活事项",
+      "description": "噪声材料手工补录已进入优先级队列",
+      "timestamp": "2026-11-07T10:07:19.903Z",
+      "kind": "confirm"
+    },
+    {
+      "id": "cdfd192a-8db7-4260-a392-e787ec2db6bd",
+      "title": "材料已保存在本次演示",
+      "description": "acceptance-noise.png等待手工确认",
+      "timestamp": "2026-11-07T10:06:23.287Z",
+      "kind": "upload"
+    },
+    {
+      "id": "e404a387-d1b1-46d9-abae-85829390d2e8",
+      "title": "材料已保存在本次演示",
+      "description": "acceptance-blank.pdf等待手工确认",
+      "timestamp": "2026-11-07T10:06:17.659Z",
+      "kind": "upload"
+    },
+    {
+      "id": "6702dbd2-72c9-4182-9e20-ce6f63c7cb3e",
+      "title": "材料已保存在本次演示",
+      "description": "acceptance-order-blur.png等待手工确认",
+      "timestamp": "2026-11-07T10:06:14.794Z",
+      "kind": "upload"
+    },
+    {
+      "id": "6d6eca63-e975-49e5-92aa-dc85d1083fae",
+      "title": "确认识别字段",
+      "description": "acceptance-order-clear.png已生成“无线降噪耳机（已核对）”",
+      "timestamp": "2026-11-07T10:06:12.536Z",
+      "kind": "confirm"
+    },
+    {
+      "id": "3553d349-80e7-4a73-bba2-f8b3a918cac3",
+      "title": "创建生活事项",
+      "description": "无线降噪耳机（已核对）已进入优先级队列",
+      "timestamp": "2026-11-07T10:06:12.535Z",
+      "kind": "confirm"
+    },
+    {
+      "id": "3eba558e-928f-4b7a-96db-8d201a15dfe0",
+      "title": "材料已保存在本次演示",
+      "description": "acceptance-order-clear.png等待手工确认",
+      "timestamp": "2026-11-07T10:05:47.222Z",
+      "kind": "upload"
+    }
+  ],
+  "histories": [
+    {
+      "id": "7f93a594-384a-46f6-baec-4bca7ac02977",
+      "matterId": "dcb0e742-4b19-4268-a476-4a2a92af2044",
+      "timestamp": "2026-11-07T10:07:26.035Z",
+      "kind": "updated",
+      "title": "事项信息与决策方案已更新",
+      "description": "优先级 70 → 42；已完成步骤按稳定标识保留。",
+      "score": 42,
+      "changes": [
+        {
+          "field": "dueDate",
+          "label": "截止日期",
+          "before": "2026-11-10",
+          "after": "2026-12-17"
+        },
+        {
+          "field": "importance",
+          "label": "重要程度",
+          "before": "未填写",
+          "after": "3"
+        },
+        {
+          "field": "preparationDays",
+          "label": "准备时间",
+          "before": "未填写",
+          "after": "2"
+        }
+      ]
+    },
+    {
+      "id": "0c4d534b-e374-401b-ab47-605ef16353b7",
+      "matterId": "56980427-3408-4d3f-98ff-82e49646c647",
+      "timestamp": "2026-11-07T10:07:19.903Z",
+      "kind": "reassessed",
+      "title": "材料字段来源已关联",
+      "description": "保留 OCR 与用户录入的来源区别；确认状态已更新，评分和行动方案已同步。",
+      "score": 59,
+      "changes": []
+    },
+    {
+      "id": "b9e8b547-d9ee-47a8-9919-22e004733b3e",
+      "matterId": "56980427-3408-4d3f-98ff-82e49646c647",
+      "timestamp": "2026-11-07T10:07:19.903Z",
+      "kind": "created",
+      "title": "创建事项并生成决策方案",
+      "description": "初始优先级 59 分，使用可维护规则计算。",
+      "score": 59,
+      "changes": []
+    },
+    {
+      "id": "c11d7c2a-ef5c-4ec4-a792-7a2741086fd5",
+      "matterId": "dcb0e742-4b19-4268-a476-4a2a92af2044",
+      "timestamp": "2026-11-07T10:06:12.536Z",
+      "kind": "reassessed",
+      "title": "材料字段来源已关联",
+      "description": "保留 OCR 与用户录入的来源区别；确认状态已更新，评分和行动方案已同步。",
+      "score": 70,
+      "changes": []
+    },
+    {
+      "id": "531ff8c9-3494-4479-a16c-cf4866334fbe",
+      "matterId": "dcb0e742-4b19-4268-a476-4a2a92af2044",
+      "timestamp": "2026-11-07T10:06:12.535Z",
+      "kind": "created",
+      "title": "创建事项并生成决策方案",
+      "description": "初始优先级 71 分，使用可维护规则计算。",
+      "score": 71,
+      "changes": []
+    }
+  ]
+}

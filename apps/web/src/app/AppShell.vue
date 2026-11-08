@@ -49,7 +49,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
       <div class="mt-auto px-1.5">
         <div class="rounded-xl border border-line bg-canvas p-3.5">
           <div class="flex items-center gap-2"><ShieldCheck :size="16" class="text-success" /><span class="text-xs font-semibold text-ink">本地演示工作区</span></div>
-          <p class="mt-2 text-xs leading-5 text-muted">数据仅保存在此浏览器。所有记录均为虚构样例。</p>
+          <p class="mt-2 text-xs leading-5 text-muted">数据仅保存在此浏览器。预置内容均为虚构样例。</p>
           <RouterLink to="/settings" class="mt-2.5 inline-flex items-center gap-1 text-xs font-semibold text-brand">查看数据边界<ChevronRight :size="13" /></RouterLink>
         </div>
         <p class="mt-4 px-2 text-[10px] font-medium tracking-[0.12em] text-slate-400 uppercase">LifeGuard · UI Preview 01</p>

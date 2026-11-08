@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-11-07T09:28:44.792Z",
+  "exportedAt": "2026-11-07T10:10:07.725Z",
   "mode": "lifeguard-local-demo",
   "profile": {
     "name": "林晓",
@@ -12,14 +12,14 @@
   "actions": [],
   "materials": [
     {
-      "id": "a6796880-2a2b-4340-b17a-c8d41ab1df62",
+      "id": "9636361f-64c8-4243-a3d2-a050a6ca06e6",
       "name": "validation-pixel.png",
       "size": 68,
       "mimeType": "image/png",
       "hash": "431ced6916a2a21a156e38701afe55bbd7f88969fbbfc56d7fe099d47f265460",
       "status": "ready",
       "source": "local",
-      "uploadedAt": "2026-11-07T09:28:05.357Z",
+      "uploadedAt": "2026-11-07T10:09:23.207Z",
       "recognitionProgress": 100,
       "recognitionStage": "已确认",
       "message": "已由你确认并生成生活事项。",
@@ -126,90 +126,90 @@
       "nextRenewal": "2026-11-19",
       "autoRenew": true,
       "notes": "",
-      "id": "b647298c-a0e5-4ce0-9235-c6a5f0b18469",
+      "id": "83ec0f61-89d0-42c6-a425-203ef16c28db",
       "status": "active",
       "source": "manual",
-      "createdAt": "2026-11-07T09:28:34.060Z",
-      "updatedAt": "2026-11-07T09:28:37.359Z",
+      "createdAt": "2026-11-07T10:09:57.126Z",
+      "updatedAt": "2026-11-07T10:10:00.358Z",
       "duplicateState": "none"
     }
   ],
   "activities": [
     {
-      "id": "77997c31-ec8d-449c-a5fc-2f31f014c858",
+      "id": "2f06ed5b-d8e9-4b1a-9612-9592717c8787",
       "title": "删除生活事项",
       "description": "集成验收订单及其行动方案已移出工作区，订阅与材料记录不受影响。",
-      "timestamp": "2026-11-07T09:28:42.292Z",
+      "timestamp": "2026-11-07T10:10:05.208Z",
       "kind": "settings"
     },
     {
-      "id": "66977f8d-f66a-4394-8899-28b2d1bc63e5",
+      "id": "eb23d729-52d2-40d8-ba77-08336d1b0e3c",
       "title": "更新事项信息",
       "description": "集成验收订单的评分与行动建议已重算",
-      "timestamp": "2026-11-07T09:28:40.161Z",
+      "timestamp": "2026-11-07T10:10:03.076Z",
       "kind": "confirm"
     },
     {
-      "id": "e901dccd-a648-4a1f-8450-94cf9b8c8eaf",
+      "id": "10f67f1b-33e0-4ca6-a73c-0958a920876d",
       "title": "恢复订阅跟踪",
       "description": "集成验收会员已恢复，预测仍取决于自动续费开关",
-      "timestamp": "2026-11-07T09:28:37.359Z",
+      "timestamp": "2026-11-07T10:10:00.358Z",
       "kind": "confirm"
     },
     {
-      "id": "3dbb17e8-c285-4a18-b3d0-0f94270af557",
+      "id": "4af54b3b-a26e-42dc-9965-c93185f53e11",
       "title": "暂停订阅跟踪",
       "description": "集成验收会员不再计入未来支出，历史记录仍保留",
-      "timestamp": "2026-11-07T09:28:35.425Z",
+      "timestamp": "2026-11-07T10:09:58.491Z",
       "kind": "settings"
     },
     {
-      "id": "830e6ca4-6250-49b9-a455-ed59e7c55a77",
+      "id": "f5e65741-5c94-4307-9548-83ad362886f1",
       "title": "新增订阅记录",
       "description": "集成验收会员 · 2026-11-19 下次续费",
-      "timestamp": "2026-11-07T09:28:34.060Z",
+      "timestamp": "2026-11-07T10:09:57.126Z",
       "kind": "confirm"
     },
     {
-      "id": "d95cbcbd-3d4d-4003-b704-7e1d40e6500e",
+      "id": "8a2a07bb-18d4-4706-aca7-46f1dee5f440",
       "title": "恢复待处理事项",
       "description": "集成验收订单已重新计算优先级",
-      "timestamp": "2026-11-07T09:28:33.308Z",
+      "timestamp": "2026-11-07T10:09:56.342Z",
       "kind": "confirm"
     },
     {
-      "id": "1b0c4f5a-d5d2-4084-a096-29fd4d32e218",
+      "id": "99dd2040-491c-473d-a468-a73618836c00",
       "title": "事项已完成",
       "description": "集成验收订单 · 集成链路验收完成",
-      "timestamp": "2026-11-07T09:28:32.043Z",
+      "timestamp": "2026-11-07T10:09:55.027Z",
       "kind": "complete"
     },
     {
-      "id": "783b0b7e-7075-454b-9d80-0f1a25989484",
+      "id": "9997043f-3a72-45c3-ae13-3304f59f4e25",
       "title": "完成一个行动步骤",
       "description": "核实关键信息与适用规则",
-      "timestamp": "2026-11-07T09:28:31.909Z",
+      "timestamp": "2026-11-07T10:09:54.909Z",
       "kind": "action"
     },
     {
-      "id": "e6c1aef3-712f-4e5d-97a9-e475cdfbd097",
+      "id": "e13eccc7-bb02-4b36-bf14-9de591721a78",
       "title": "确认识别字段",
       "description": "validation-pixel.png已生成“集成验收订单”",
-      "timestamp": "2026-11-07T09:28:29.879Z",
+      "timestamp": "2026-11-07T10:09:52.946Z",
       "kind": "confirm"
     },
     {
-      "id": "66c21a07-6a61-4f7f-a279-0d06e5e4a02a",
+      "id": "a4f2f152-65a7-4abc-870b-f3a90ae76b00",
       "title": "创建生活事项",
       "description": "集成验收订单已进入优先级队列",
-      "timestamp": "2026-11-07T09:28:29.879Z",
+      "timestamp": "2026-11-07T10:09:52.946Z",
       "kind": "confirm"
     },
     {
-      "id": "1a509583-804b-4344-8fd4-4604b023d592",
+      "id": "ae7371e1-cb04-40e3-901e-997c9ba5e3e6",
       "title": "材料已保存在本次演示",
       "description": "validation-pixel.png等待手工确认",
-      "timestamp": "2026-11-07T09:28:05.357Z",
+      "timestamp": "2026-11-07T10:09:23.207Z",
       "kind": "upload"
     }
   ],

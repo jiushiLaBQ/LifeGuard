@@ -24,6 +24,8 @@ function loadDemoState() {
           }
         })
         parsed.histories = Array.isArray(parsed.histories) ? parsed.histories : []
+        const videoMatter = parsed.matters.find((matter) => matter.id === 'matter-video')
+        if (videoMatter && !videoMatter.subscriptionId && parsed.subscriptions.some((subscription) => subscription.id === 'sub-video')) videoMatter.subscriptionId = 'sub-video'
         const migratedAt = new Date().toISOString()
         parsed.subscriptions.forEach((subscription) => {
           subscription.currency = subscription.currency ?? 'CNY'
@@ -314,7 +316,9 @@ export const useDemoStore = defineStore('demo', () => {
     material.recognitionProgress = 100
     material.recognitionStage = '等待你确认'
     material.status = 'awaiting_confirmation'
-    material.message = '识别结果仅为候选，请核对后再生成正式事项。'
+    material.message = fields.some((field) => field.value.trim())
+      ? '识别结果仅为候选，请核对后再生成正式事项。'
+      : '这份文件没有提取到可用字段（可能为空白、模糊或与业务无关）。请手工录入，或重选文件后重新识别。'
   }
 
   function failRecognition(id: string, message: string, fields: ExtractedField[]) {
